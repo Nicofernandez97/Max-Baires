@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traslados</title>
+  <!--Css Personal-->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!--Cdn Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="menuNavegador">
+        <li>
+          <img src="../assets/img/logo.png" alt="logoplaceholder" />
+        </li>
+        <li>
+          <h1>Max Baires</h1>
+        </li>
+        <li><a href="../index.html">Inicio</a></li>
+        <li>
+          <a href="../pages/paq_Internacionales.html">Paquetes Internacionales
+          </a>
+        </li>
+        <li>
+          <a href="../pages/paq_nacionales.html">Paquetes Nacionales</a>
+        </li>
+        <li><a style="background-color: aqua;" href="../pages/traslados.html">Traslados</a></li>
+        <li><a href="../pages/alojamiento.html">Alojamiento</a></li>
+        <li class="buttonsNav">Mis Reservas</li>
+        <li class="buttonsNav">Ingresá!</li>
+        <li class="buttonsNav">Registrate!</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="ad_front">
+        <img class="ad_index" src="../assets/img/coca1.jpg" alt="" />
+        <img class="ad_index" src="../assets/img/coca2.jpg" alt="" />
+      </div>
+    </section>
+    <section>
+      <div class="armado_paq_index">
+        <h2> <strong>Viaja de la manera mas comoda con nuestros choferes </strong> </h2>
+        <form>
+          <fieldset>
+            <div>
+
+              <label for="origen"><strong>Salida desde:</strong></label>
+              <input type="text" name="origen" id="" value="(origen)" />
+            </div>
+            <div>
+              <label for="destino"><strong>Destino</strong></label>
+              <input type="text" name="destino" id="" value="(destino)" />
+            </div>
+            <div>
+              <label for="fecha_hora_salida"><strong>Fecha de Salida</strong></label>
+              <input type="date" name="fecha_hora_salida" id="">
+            </div>
+            <div>
+              <label for=""><strong>Cantidad de personas</strong></label>
+              <select name="1-2">
+                <option value="1-3">1-3</option>
+                <option value="4-6">4-6</option>
+                <option value="6+">6+</option>
+              </select>
+            </div>
+            <div>
+              <label for=""><strong>Gama Del Vehiculo</strong></label>
+              <select name="Gama Alta">
+                <option value="gamaalta">Gama Alta</option>
+                <option value="gamamedia">Gama Media</option>
+                <option value="Gamabaja">Gama Baja</option>
+              </select>
+            </div>
+            <div>
+              <label for=""><strong>Vehiculo/Camioneta</strong></label>
+              <select name="Volkswagen Virtus">
+                <option value="Gama-alta-1">Volkswagen Virtus</option>
+                <option value="Gama_alta_2">Chevrolet Cruze Rs </option>
+                <option value="gama_media_1">Renault Logan</option>
+                <option value="gama_media_2">Nissan March</option>
+                <option value="gama_baja_1">Hyundai i30</option>
+                <option value="gama_baja_2">Peugeot 206</option>
+              </select>
+            </div>
+            <button type="submit" class="button-ancho2">Buscar</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <section>
+      <div class="galeria_traslados">
+        <form action="">
+          <label class="titulo_traslados_form" for="Titulo"><strong>Alquila Tu Vehiculo!</strong></label>
+          <br>
+          <br>
+          <label for=""><strong>Filtrar Por Modelo</strong></label>
+          <br>
+          <label for="">Vehiculo/Camioneta</label>
+          <br>
+          <select name="Volkswagen Virtus">
+            <option value="Gama-alta-1">Volkswagen Virtus</option>
+            <option value="Gama_alta_2">Chevrolet Cruze Rs </option>
+            <option value="gama_media_1">Renault Logan</option>
+            <option value="gama_media_2">Nissan March</option>
+            <option value="gama_baja_1">Hyundai i30</option>
+            <option value="gama_baja_2">Peugeot 206</option>
+          </select>
+          <br>
+          <label for="lugar_retiro"><strong>Lugar de retiro</strong></label>
+          <br>
+          <input type="text" name="lugar_retiro" id="" value="Lugar de retiro..." />
+          <br>
+          <label for="gama_vehiculo"><strong> Gama Del Vehiculo</strong></label>
+          <label for="gama_alta">Gama Alta</label>
+          <input type="radio" name="gama_vehiculo" id="alta_gama" />
+          <label for="gama_alta">Gama Media</label>
+          <input type="radio" name="gama_vehiculo" id="media_gama" />
+          <label for="gama_alta">Gama Baja</label>
+          <input type="radio" name="gama_vehiculo" id="baja_gama" />
+
+          <label for="buscar_precio"><strong>Precio Por Dia</strong></label>
+          <select name="buscar_precio">
+            <option value="precio1">0-10000$</option>
+            <option value="precio2">10000-20000$</option>
+            <option value="precio3">20000$ +</option>
+          </select>
+        </form>
+        <div class="galeria_traslados-columna2">
+          <img src="../assets/img/volkswagen_virtus.jpg" alt="">
+          <img src="../assets/img/chevrolet_cruze_rs.jpg" alt="">
+          <img src="../assets/img/nissan_march.jpg" alt="">
+        </div>
+
+        <div class="galeria_traslados-columna3">
+          <p>Auto: Wolksvagen Virtus
+            <br>
+            (Descripcion auto y cobertura seguro)
+          </p>
+          <p>Auto: Chevrolet Cruze RS
+            <br>
+            (Descripcion auto y cobertura seguro)
+
+          </p>
+          <p>Auto: Nissan March
+            <br>
+            (Descripcion auto y cobertura seguro)
+          </p>
+
+        </div>
+        <div class="galeria_traslados-columna4">
+          <p>$$-----
+            <br>
+            <button class="button_alquiler_auto"><strong>Alquila! </strong></button>
+          </p>
+          <p>$$$-----
+            <br>
+            <button class="button_alquiler_auto"><strong>Alquila! </strong></button>
+          </p>
+          <p>$-----
+            <br>
+            <button class="button_alquiler_auto"><strong>Alquila! </strong></button>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="setup_footer">
+    <div class="divs_footer">
+      <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-facebook fa-4x"></i></a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-instagram fa-4x"></i></a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-twitter fa-4x"></i></a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-youtube fa-4x"></i></a>
+    </div>
+    <div class="divs_footer">
+      <p>
+        Derechos Reservados, avisos legales, acerca de nosotros...
+      <div></div>
+      terminos y condiciones de compras de servicios turisticos
+      </p>
+    </div>
+    <div class="divs_footer">
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        Servicio venta: 0800...
+      <div></div>
+      <i class="fa-solid fa-phone"></i>
+      Servicio posventa: 0800...
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

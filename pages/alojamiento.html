@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alojamiento</title>
+  <!--Css Personal-->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!--Cdn Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="menuNavegador">
+        <li>
+          <img src="../assets/img/logo.png" alt="logoplaceholder" />
+        </li>
+        <li>
+          <h1>Max Baires</h1>
+        </li>
+        <li><a href="../index.html">Inicio</a></li>
+        <li>
+          <a href="../pages/paq_Internacionales.html">Paquetes Internacionales
+          </a>
+        </li>
+        <li>
+          <a href="../pages/paq_nacionales.html">Paquetes Nacionales</a>
+        </li>
+        <li><a href="../pages/traslados.html">Traslados</a></li>
+        <li><a style="background-color: aqua;" href="../pages/alojamiento.html">Alojamiento</a></li>
+        <li class="buttonsNav">Mis Reservas</li>
+        <li class="buttonsNav">Ingresá!</li>
+        <li class="buttonsNav">Registrate!</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="ad_front">
+        <img class="ad_index" src="../assets/img/coca1.jpg" alt="" />
+        <img class="ad_index" src="../assets/img/coca2.jpg" alt="" />
+      </div>
+    </section>
+    <section>
+      <div class="armado_paq_index">
+        <h2> <strong>Elegí tu alojamiento soñado </strong> </h2>
+        <form>
+          <fieldset>
+            <div>
+              <label for="destino"><strong>Destino</strong></label>
+              <input type="text" name="destino" id="" value="(destino)" />
+            </div>
+            <div>
+              <label for=""><strong>Tipo de alojamiento</strong></label>
+              <select name="1-2">
+                <option value="hotel">Hotel</option>
+                <option value="hostel">Hostel</option>
+                <option value="particular">Particular</option>
+              </select>
+            </div>
+            <div>
+              <label for="desde"><strong>Desde</strong></label>
+              <input type="date" name="desde" id="">
+            </div>
+            <div>
+              <label for="hasta"><strong>Hasta</strong></label>
+              <input type="date" name="hasta" id="">
+            </div>
+            <div>
+              <label for="cant_habitaciones"><strong>Cantidad de habitaciones</strong></label>
+              <select name="1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div>
+              <label for=""><strong>Numero de personas</strong></label>
+              <select name="Gama Alta">
+                <option value="adnomen">0-2 Adultos y 0 Menores</option>
+                <option value="midadymen">1-2 Adultos y 1-2 Menores</option>
+                <option value="muchosadymen">+2 Adultos y +2 Menores</option>
+              </select>
+            </div>
+            <button type="submit" class="button-ancho3">Buscar</button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="galeria_alojamiento">
+        <form action="">
+          <label class="titulo_alojamiento_form" for="titulo_alojamiento"><strong>Hospedate con nuestros
+              partners</strong></label>
+          <br>
+          <br>
+          <label for="nombre_alojamiento"><strong>Filtro por nombre</strong></label>
+          <br>
+          <input type="text" name="nombre_alojamiento" id="" value="(nombre alojamiento)" />
+          <br>
+          <label for="buscar_estrellas"><strong> Buscar por estrellas</strong></label>
+          <label for="5estrellas">5 Estrellas</label>
+          <input type="radio" name="estrellas" id="alta_gama" />
+          <label for="4estrellas">4 Estrellas</label>
+          <input type="radio" name="estrellas" id="media_gama" />
+          <label for="3estrellas">3 Estrellas</label>
+          <input type="radio" name="estrellas" id="baja_gama" />
+          <label for="hostel">Hostel</label>
+          <input type="radio" name="hostel_o_particular" id="hosteloparticular" />
+          <label for="particular">Particular</label>
+          <input type="radio" name="hostel_o_particular" id="hostel_o_particular" />
+          <button type="button-ancho3">Buscar</button>
+          <label for="buscar_precio_alo"><strong>Precio Por Noche</strong></label>
+          <select name="buscar_precio">
+            <option value="precio1alo">0-15000$ x Noche</option>
+            <option value="precio2alo">15000-30000$ x Noche</option>
+            <option value="precio3alo">30000$+ x Noche</option>
+          </select>
+        </form>
+        <div class="galeria_alojamiento-columna2">
+          <img src="../assets/img/hotel_hilton.jpg" alt="">
+          <img src="../assets/img/hoteles_sheraton.jpg" alt="">
+          <img src="../assets/img/Millhouse_hostel.jpg" alt="">
+        </div>
+        <div class="galeria_alojamiento-columna3">
+          <p>Hoteles Hilton
+            <br>
+            (Descripcion localidades disponibles del hotel, puntuacion / estrellas )
+          </p>
+          <p>Hoteles Sheraton
+            <br>
+            (Descripcion localidades disponibles del hotel, puntuacion / estrellas )
+          </p>
+          <p>Millhouse Hostel Avenue
+            <br>
+            (Descripcion localidades disponibles del hostel, puntuacion / estrellas )
+          </p>
+        </div>
+        <div class="galeria_alojamiento-columna4">
+          <p>$$$-----
+            <br>
+            <button class="button_alquiler_auto"><strong>Reserva! </strong></button>
+          </p>
+          <p>$$-----
+            <br>
+            <button class="button_alquiler_auto"><strong>Reserva! </strong></button>
+          </p>
+          <p>$-----
+            <br>
+            <button class="button_alquiler_auto"><strong>Reserva! </strong></button>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="setup_footer">
+    <div class="divs_footer">
+      <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-facebook fa-4x"></i></a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-instagram fa-4x"></i></a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-twitter fa-4x"></i></a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-youtube fa-4x"></i></a>
+    </div>
+    <div class="divs_footer">
+      <p>
+        Derechos Reservados, avisos legales, acerca de nosotros...
+      <div></div>
+      terminos y condiciones de compras de servicios turisticos
+      </p>
+    </div>
+    <div class="divs_footer">
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        Servicio venta: 0800...
+      <div></div>
+      <i class="fa-solid fa-phone"></i>
+      Servicio posventa: 0800...
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

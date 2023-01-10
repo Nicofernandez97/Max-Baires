@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agencia De Viajes</title>
+  <!--Css Personal-->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!--Cdn Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="menuNavegador">
+        <li>
+          <img src="./assets/img/logo.png" alt="logoplaceholder" />
+        </li>
+        <li>
+          <h1>Max Baires</h1>
+        </li>
+        <li><a style="background-color: aqua;" href="./index.html">Inicio</a></li>
+        <li>
+          <a href="./pages/paq_Internacionales.html">Paquetes Internacionales
+          </a>
+        </li>
+        <li><a href="./pages/paq_nacionales.html">Paquetes Nacionales</a></li>
+        <li><a href="./pages/traslados.html">Traslados</a></li>
+        <li><a href="./pages/alojamiento.html">Alojamiento</a></li>
+        <li class="buttonsNav">Mis Reservas</li>
+        <li class="buttonsNav">Ingresá!</li>
+        <li class="buttonsNav">Registrate!</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="ad_front">
+        <img class="ad_index" src="./assets/img/coca1.jpg" alt="" />
+        <img class="ad_index" src="./assets/img/coca2.jpg" alt="" />
+      </div>
+    </section>
+    <section>
+      <div class="armado_paq_index">
+        <h2>Armá tu paquete!</h2>
+        <form>
+          <fieldset>
+            <div>
+              <label for="fechasalida"><strong> Fecha de salida</strong></label>
+              <input type="date" name="fechasalida" id="">
+            </div>
+            <div>
+              <label for="fecharegreso"><strong>Fecha de llegada</strong></label>
+              <input type="date" name="fecharegreso" id="">
+            </div>
+            <div>
+              <label for="origen"><strong>Salida desde:</strong></label>
+              <input type="text" name="origen" id="" value="(origen)" />
+            </div>
+            <div>
+              <label for="destino"><strong>Destino</strong></label>
+              <input type="text" name="destino" id="" value="(destino)" />
+            </div>
+            <div>
+              <label for=""><strong>Cantidad de personas</strong></label>
+              <select name="1-2">
+                <option value="1-2">1-2</option>
+                <option value="3-4">3-4</option>
+                <option value="5-6+">5-6+</option>
+              </select>
+            </div>
+            <div>
+              <label for="alojamiento"><strong>Incluye alojamiento?</strong></label>
+              <div>
+                <label for="opcion_si">Sí</label>
+                <input type="radio" name="alojamiento" id="opcion_si" />
+              </div>
+              <div>
+                <label for="opcion_no">No</label>
+                <input type="radio" name="alojamiento" id="opcion_no" />
+              </div>
+            </div>
+            <button type="submit" class="button-ancho">Enviar!</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <section>
+      <div class="encabezado_sector">
+        <h2>Nuestros Destinos Mas Populares</h2>
+        <form action="">
+          Filtro:
+          <select name="Precio">
+            <option value="menoraMayor">Precio Ascendiente</option>
+            <option value="">Precio Descendiente</option>
+            <option value="5-6+">Mayor % Descuento</option>
+          </select>
+          <label for="filtrodestino">Destino</label>
+          <input type="text" name="destino" id="" value="(destino)" />
+        </form>
+      </div>
+    </section>
+    <section>
+      <h3>
+        <p class="titulos_menores">Destinos en Argentina</p>
+        <p class="titulos_menores">Destinos Internacionales</p>
+      </h3>
+      <section>
+        <div class="galeria_index">
+          <img src="./assets/img/saltafoto.jpg" alt="Imagen Salta y Jujuy">
+          <img src="./assets/img/bariloche.jpg" alt="Imagen Bariloche">
+          <img src="./assets/img/cataratas.jpg" alt="Imagen Cataratas">
+          <img class="primera_inter_index" src="./assets/img/madridpos.jpg" alt="imagen Madrid">
+          <img src="./assets/img/italiapos2.jpg" alt="Imagen Italia">
+          <img src="./assets/img/qatarpos1.jpg" alt="imagen Qatar">
+          <p class="texto_salta">
+            <strong> <a style="color: red;" href="./pages/paq_nacionales.html">Paquete Salta-Jujuy </a>
+              <br>
+              <a style="color: red;" href="./pages/paq_nacionales.html"> $ 500 USD </a>
+            </strong>
+          <p class="texto_bariloche">
+            <strong> <a style="color: red;" href="./pages/paq_nacionales.html">Paquete Bariloche </a>
+              <br>
+              <a style="color: red;" href="./pages/paq_nacionales.html">$ 750 USD </a>
+            </strong>
+          <p class="texto_cataratas">
+            <strong> <a style="color: red;" href="./pages/paq_nacionales.html">Paquete</a>
+              <br>
+              <a style="color: red;" href="./pages/paq_nacionales.html">Cataratas </a>
+              <br>
+              <a style="color: red;" href="./pages/paq_nacionales.html">$ 900 USD </a>
+            </strong>
+          <p class="texto_madrid">
+            <a style="color: red;" href="./pages/paq_Internacionales.html">Paquete Madrid </a>
+            <br>
+            <a style="color: red;;" href="./pages/paq_Internacionales.html">$1000 USD </a>
+          </p>
+          <p class="texto_italia">
+            <a style="color: red;;" href="./pages/paq_Internacionales.html">Paquete Italia </a>
+            <br>
+            <a style="color: red;;" href="./pages/paq_Internacionales.html">$1300 USD </a>
+          </p>
+          <p class="texto_qatar">
+            <strong><a style="color: red;;" href="./pages/paq_Internacionales.html">Paquete Qatar </a>
+              <br>
+              <a style="color: red;;" href="./pages/paq_Internacionales.html">$1900 USD </a>
+            </strong>
+          </p>
+        </div>
+      </section>
+  </main>
+  <footer class="setup_footer">
+    <div class="divs_footer">
+      <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-facebook fa-4x"></i></a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-instagram fa-4x"></i></a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-twitter fa-4x"></i></a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-youtube fa-4x"></i></a>
+    </div>
+    <div class="divs_footer">
+      <p>
+        Derechos Reservados, avisos legales, acerca de nosotros...
+      <div></div>
+      terminos y condiciones de compras de servicios turisticos
+      </p>
+    </div>
+    <div class="divs_footer">
+      <p>
+        <i class="fa-solid fa-phone"></i>
+        Servicio venta: 0800...
+      <div></div>
+      <i class="fa-solid fa-phone"></i>
+      Servicio posventa: 0800...
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
