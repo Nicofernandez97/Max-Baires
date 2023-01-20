@@ -1,641 +1,664 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 35px;
+.contenedorGrid {
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header header"
+    "searchbar searchbar"
+    "principal ad"
+    "footer footer";
 }
 
-.menuNavegador {
-    font-family: 'Times New Roman', Times, serif;
+.navegador {
+  grid-area: header;
 }
 
-.menuNavegador img {
-    height: 50px;
+.armado_paq_index label {
+  color: white;
 }
 
-.menuNavegador li {
-    display: inline-block;
+.barra {
+  grid-area: searchbar;
+  background-color: rgb(9, 9, 141);
+  font-family: sans-serif;
 }
 
-.menuNavegador li a {
-    font-size: 35px;
-    text-decoration: none;
-    border: solid 3px black;
-    padding: 3px;
+#ad {
+  grid-area: ad;
 }
 
-.buttonsNav {
-    font-size: 35px;
-    border: solid 3px black;
-    padding: 3px;
+#ad img {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
-
-.ad_front {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.ad_index {
-    height: 280px;
-    width: 50%;
-}
-
-.galeria_top_nacionales {
-    display: flex;
-    height: 20rem;
-    position: relative;
-}
-
-.galeria_top_nacionales img {
-    width: 18%;
-}
-
-.galeria_top_nacionales .segundaimagen {
-    width: 40%;
-    height: 80%;
-    flex-direction: row;
-    align-self: flex-end;
-    ;
-}
-
-.galeria_top_nacionales input {
-    flex-direction: column;
-    height: 30px;
-    width: 7%;
-    align-self: center;
-}
-
-.galeria_top_nacionales label {
-    flex-direction: column;
-    align-self: center;
-    height: 30px;
-    text-align: center;
-}
-
-.galeria_middle_nacionales-titulo {
-    height: 3rem;
-    display: flex
-}
-
-.galeria_middle_nacionales-titulo h3 {
-    font-size: 1.5rem;
-    margin-left: 29%;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.galeria_middle_nacionales {
-    height: 20rem;
-    display: flex;
-    position: relative;
-}
-
-.galeria_middle_nacionales form {
-    width: 13%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-}
-
-.galeria_middle_nacionales img {
-    width: 14%;
-}
-
-.galeria_middle_nacionales-cuarta {
-    margin-left: 5%;
-}
-
-.galeria_paq_internacionales {
-    display: flex;
-    flex-direction: row;
-    height: 55rem;
-    position: relative;
-}
-
-.galeria_paq_internacionales-titulo1 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 130%;
-}
-
-.galeria_paq_internacionales-titulo2 div {
-    display: inline-block;
-    margin-left: 15.5%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 110%;
-}
-
-.galeria_paq_internacionales img {
-    height: 33%;
-}
-
-.galeria_paq_internacionales form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 10%;
-    font-size: large;
-}
-
-.galeria_traslados {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 55rem;
-    position: relative;
-}
-
-.galeria_traslados_titulo {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 130%;
-}
-
-.galeria_traslados form {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 10%;
-}
-
-.titulo_traslados_form {
-    font-size: 130%;
-}
-
-.galeria_traslados-columna2 {
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-    margin-left: 3%;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-}
-
-.galeria_traslados-columna2 img {
-    width: 100%;
-    height: 30%;
-    margin-bottom: 3%
-}
-
-.galeria_traslados-columna3 {
-    width: 13%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    justify-content: space-evenly;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.galeria_traslados-columna4 {
-    width: 7%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    justify-content: space-evenly;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.galeria_alojamiento {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 55rem;
-    position: relative;
-}
-
-.galeria_alojamiento_titulo {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 130%;
-}
-
-.galeria_alojamiento form {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 10%;
-}
-
-.galeria_alojamiento form label {
-    display: inline;
-}
-
-.galeria_alojamiento form input {
-    display: inline;
-}
-
-.titulo_alojamiento_form {
-    font-size: 130%;
-}
-
-.galeria_alojamiento-columna2 {
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-    margin-left: 3%;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-}
-
-.galeria_alojamiento-columna2 img {
-    width: 100%;
-    height: 30%;
-    margin-bottom: 3%;
-}
-
-.galeria_alojamiento-columna3 {
-    width: 13%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    justify-content: space-evenly;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.galeria_alojamiento-columna4 {
-    width: 7%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    justify-content: space-evenly;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.button_alquiler_auto {
-    background-color: rgb(253, 237, 5);
-    font-size: larger;
-}
-
-.galeria_paq_internacionales-columnas {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 18%;
-    margin-right: 5%;
-    height: 55rem;
-    position: relative;
-}
-
-.texto_titulo_top_nacionales {
-    position: absolute;
-    top: 5%;
-    left: 30%;
-    font-size: larger;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.texto_fiestas_norte {
-    position: absolute;
-    top: 5%;
-    left: 13%;
-    font-size: larger;
-    background-color: black;
-}
-
-.texto_fiestas_superoferta {
-    position: absolute;
-    top: 20%;
-    left: 35%;
-    font-size: larger;
-    background-color: black;
-}
-
-.texto_fiestas_sur {
-    position: absolute;
-    top: 5%;
-    left: 68%;
-    font-size: larger;
-    background-color: black;
-}
-
-.texto_fiestas_cataratas {
-    position: absolute;
-    top: 4%;
-    left: 86%;
-    font-size: large;
-    background-color: black;
-}
-
-.texto_norte_salta {
-    position: absolute;
-    top: 5%;
-    left: 15%;
-    font-size: larger;
-    background-color: black;
-}
-
-.texto_norte_tucuman {
-    position: absolute;
-    top: 5%;
-    left: 28%;
-    font-size: larger;
-    background-color: black;
-}
-
-.texto_norte_formosa {
-    position: absolute;
-    top: 5%;
-    left: 43%;
-    font-size: larger;
-    background-color: black;
-}
-
-.texto_patagonia_rionegro {
-    position: absolute;
-    top: 5%;
-    left: 61%;
-    font-size: large;
-    background-color: black;
-}
-
-.texto_patagonia_neuquen {
-    position: absolute;
-    top: 5%;
-    left: 76%;
-    font-size: large;
-    background-color: black;
-}
-
-.texto_patagonia_santacruz {
-    position: absolute;
-    top: 5%;
-    left: 90%;
-    font-size: large;
-    background-color: black;
-}
-
-.texto_internacional_espana {
-    position: absolute;
-    top: 0%;
-    left: 12%;
-    font-size: large;
-    background-color: black;
-    text-align: center;
-}
-
-.texto_internacional_grecia {
-    position: absolute;
-    top: 33%;
-    left: 12%;
-    font-size: large;
-    background-color: black;
-    text-align: center;
-}
-
-.texto_internacional_reino_unido {
-    position: absolute;
-    top: 66%;
-    left: 12%;
-    font-size: large;
-    background-color: black;
-    text-align: center;
-}
-
-.texto_internacional_china {
-    position: absolute;
-    top: 0%;
-    left: 39%;
-    font-size: large;
-    background-color: black;
-    text-align: center;
-}
-
-.texto_internacional_india {
-    position: absolute;
-    top: 33%;
-    left: 39%;
-    font-size: large;
-    background-color: black;
-    text-align: center;
-}
-
-.texto_internacional_filipinas {
-    position: absolute;
-    top: 66%;
-    left: 39%;
-    font-size: large;
-    background-color: black;
-    text-align: center;
-}
-
-.texto_internacional_mexico {
-    position: absolute;
-    top: 0%;
-    left: 62%;
-    font-size: large;
-    background-color: black;
-    text-align: center;
-}
-
-.texto_internacional_eeuu {
-    position: absolute;
-    top: 33%;
-    left: 62%;
-    font-size: large;
-    background-color: black;
-    text-align: center;
-}
-
-.texto_internacional_brasil {
-    position: absolute;
-    top: 66%;
-    left: 62%;
-    font-size: large;
-    background-color: black;
-    text-align: center;
-}
-
-.texto_internacional_egipto {
-    position: absolute;
-    top: 0%;
-    left: 84%;
-    font-size: large;
-    background-color: black;
-    text-align: center;
-}
-
-.texto_internacional_sudafrica {
-    position: absolute;
-    top: 33%;
-    left: 84%;
-    font-size: large;
-    background-color: black;
-    text-align: center;
-}
-
-.texto_internacional_zimbabue {
-    position: absolute;
-    top: 66%;
-    left: 84%;
-    font-size: large;
-    background-color: black;
-    text-align: center;
-}
-
-.volkswagen_virtus {
-    font-size: larger;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.armado_paq_index {
-    border: 2px black solid;
-}
-
-.armado_paq_index h2 {
-    text-align: center;
-}
-
-.armado_paq_index div {
-    display: inline-block;
-    margin: 7px;
-    padding: 5px;
-    font-size: 20px;
-}
-
-.button-ancho {
-    margin-left: 10px;
-    font-size: 20px;
-    width: 110px;
-    background-color: aqua;
-}
-
-.button-ancho2 {
-    margin-left: 8px;
-    font-size: 18px;
-    width: 80px;
-    background-color: aqua;
-}
-
-.button-ancho3 {
-    margin-left: 10px;
-    font-size: 20px;
-    width: 120px;
-    background-color: aqua;
-}
-
-.encabezado_sector {
-    text-align: center;
-    display: flex;
-    margin-left: 40%;
-}
-
-.encabezado_sector label {
-    display: flex;
-    margin-left: 40%;
-    font-size: large;
-    flex-direction: row;
-}
-
-.encabezado_sector select {
-    display: flex;
-    margin-left: 40%;
-    font-size: large;
-    flex-direction: row;
-}
-
-.encabezado_sector input {
-    display: flex;
-    margin-left: 40%;
-    font-size: large;
-    flex-direction: row;
-}
-
-.titulos_menores {
-    display: inline-block;
-    width: 15%;
-    margin-left: 25%;
-    font-size: 130%;
-}
-
-.galeria_index {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    height: 39rem;
-    position: relative;
-}
-
-.galeria_index img {
-    width: 16%;
-    height: 100%;
-}
-
-.texto_salta {
-    position: absolute;
-    top: 6%;
-    left: 4%;
-    font-size: larger;
-    background-color: black;
-}
-
-.texto_bariloche {
-    position: absolute;
-    top: 6%;
-    left: 21%;
-    font-size: larger;
-    background-color: black;
-
-}
-
-.texto_cataratas {
-    position: absolute;
-    top: 6%;
-    left: 36%;
-    font-size: larger;
-    background-color: black;
-
-}
-
-.texto_madrid {
-    position: absolute;
-    top: 6%;
-    left: 56%;
-    font-size: larger;
-    background-color: black;
-
-}
-
-.texto_italia {
-    position: absolute;
-    top: 6%;
-    left: 76%;
-    font-size: larger;
-    background-color: black;
-
-}
-
-.texto_qatar {
-    position: absolute;
-    top: 6%;
-    left: 90%;
-    font-size: larger;
-    background-color: black;
-
-}
-
-.galeria_index a {
-    text-decoration: none;
-    color: black;
+.principal {
+  grid-area: principal;
 }
 
 .setup_footer {
-    background-color: rgb(228, 198, 198);
-    display: flex;
+  grid-area: footer;
 }
 
-.primera_inter_index {
-    margin-left: 3%;
+.menuNavegador {
+  display: flex;
+  font-family: sans-serif;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  background-color: rgb(228, 198, 198);
+}
+
+.menuNavegador img {
+  height: 5vh;
+}
+
+.menuNavegador .menuSeleccionado {
+  background-color: aqua;
+}
+
+.menuNavegador li {
+  display: inline-block;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.menuNavegador li a {
+  font-size: 2vh;
+  text-decoration: none;
+  padding: 3px;
+}
+
+.buttonsNav {
+  font-size: 35px;
+  border: solid 3px black;
+  padding: 3px;
+}
+
+.ad_front {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ad_index {
+  height: 280px;
+  width: 50%;
+}
+
+.galeria_top_nacionales {
+  display: flex;
+  height: 20rem;
+  position: relative;
+}
+
+.galeria_top_nacionales img {
+  width: 18%;
+}
+
+.galeria_top_nacionales .segundaimagen {
+  width: 40%;
+  height: 80%;
+  flex-direction: row;
+  align-self: flex-end;
+}
+
+.galeria_top_nacionales input {
+  flex-direction: column;
+  height: 30px;
+  width: 7%;
+  align-self: center;
+}
+
+.galeria_top_nacionales label {
+  flex-direction: column;
+  align-self: center;
+  height: 30px;
+  text-align: center;
+}
+
+.galeria_middle_nacionales-titulo {
+  height: 3rem;
+  display: flex;
+}
+
+.galeria_middle_nacionales-titulo h3 {
+  font-size: 1.5rem;
+  margin-left: 29%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.galeria_middle_nacionales {
+  height: 20rem;
+  display: flex;
+  position: relative;
+}
+
+.galeria_middle_nacionales form {
+  width: 13%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+
+.galeria_middle_nacionales img {
+  width: 14%;
+}
+
+.galeria_middle_nacionales-cuarta {
+  margin-left: 5%;
+}
+
+.galeria_paq_internacionales {
+  display: flex;
+  flex-direction: row;
+  height: 55rem;
+  position: relative;
+}
+
+.galeria_paq_internacionales-titulo1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 130%;
+}
+
+.galeria_paq_internacionales-titulo2 div {
+  display: inline-block;
+  margin-left: 15.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 110%;
+}
+
+.galeria_paq_internacionales img {
+  height: 33%;
+}
+
+.galeria_paq_internacionales form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 10%;
+  font-size: large;
+}
+
+.galeria_traslados {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 55rem;
+  position: relative;
+}
+
+.galeria_traslados_titulo {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 130%;
+}
+
+.galeria_traslados form {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 10%;
+}
+
+.titulo_traslados_form {
+  font-size: 130%;
+}
+
+.galeria_traslados-columna2 {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin-left: 3%;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.galeria_traslados-columna2 img {
+  width: 100%;
+  height: 30%;
+  margin-bottom: 3%;
+}
+
+.galeria_traslados-columna3 {
+  width: 13%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-evenly;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.galeria_traslados-columna4 {
+  width: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-evenly;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.galeria_alojamiento {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 55rem;
+  position: relative;
+}
+
+.galeria_alojamiento_titulo {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 130%;
+}
+
+.galeria_alojamiento form {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 10%;
+}
+
+.galeria_alojamiento form label {
+  display: inline;
+}
+
+.galeria_alojamiento form input {
+  display: inline;
+}
+
+.titulo_alojamiento_form {
+  font-size: 130%;
+}
+
+.galeria_alojamiento-columna2 {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin-left: 3%;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.galeria_alojamiento-columna2 img {
+  width: 100%;
+  height: 30%;
+  margin-bottom: 3%;
+}
+
+.galeria_alojamiento-columna3 {
+  width: 13%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-evenly;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.galeria_alojamiento-columna4 {
+  width: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-content: space-evenly;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.button_alquiler_auto {
+  background-color: rgb(253, 237, 5);
+  font-size: larger;
+}
+
+.galeria_paq_internacionales-columnas {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 18%;
+  margin-right: 5%;
+  height: 55rem;
+  position: relative;
+}
+
+.texto {
+  position: absolute;
+  font-size: larger;
+  background-color: rgb(41, 223, 236);
+  font-family: sans-serif;
+}
+
+.texto a {
+  color: black !important;
+}
+
+.texto_salta a {
+  color: red;
+}
+
+.texto_titulo_top_nacionales {
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.texto_fiestas_norte {
+  position: absolute;
+  top: 5%;
+  left: 13%;
+  font-size: larger;
+  background-color: black;
+}
+
+.texto_fiestas_superoferta {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  font-size: larger;
+  background-color: black;
+}
+
+.texto_fiestas_sur {
+  position: absolute;
+  top: 5%;
+  left: 68%;
+  font-size: larger;
+  background-color: black;
+}
+
+.texto_fiestas_cataratas {
+  position: absolute;
+  top: 4%;
+  left: 86%;
+  font-size: large;
+  background-color: black;
+}
+
+.texto_norte_salta {
+  position: absolute;
+  top: 5%;
+  left: 15%;
+  font-size: larger;
+  background-color: black;
+}
+
+.texto_norte_tucuman {
+  position: absolute;
+  top: 5%;
+  left: 28%;
+  font-size: larger;
+  background-color: black;
+}
+
+.texto_norte_formosa {
+  position: absolute;
+  top: 5%;
+  left: 43%;
+  font-size: larger;
+  background-color: black;
+}
+
+.texto_patagonia_rionegro {
+  position: absolute;
+  top: 5%;
+  left: 61%;
+  font-size: large;
+  background-color: black;
+}
+
+.texto_patagonia_neuquen {
+  position: absolute;
+  top: 5%;
+  left: 76%;
+  font-size: large;
+  background-color: black;
+}
+
+.texto_patagonia_santacruz {
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  font-size: large;
+  background-color: black;
+}
+
+.texto_internacional_espana {
+  position: absolute;
+  top: 0%;
+  left: 12%;
+  font-size: large;
+  background-color: black;
+  text-align: center;
+}
+
+.texto_internacional_grecia {
+  position: absolute;
+  top: 33%;
+  left: 12%;
+  font-size: large;
+  background-color: black;
+  text-align: center;
+}
+
+.texto_internacional_reino_unido {
+  position: absolute;
+  top: 66%;
+  left: 12%;
+  font-size: large;
+  background-color: black;
+  text-align: center;
+}
+
+.texto_internacional_china {
+  position: absolute;
+  top: 0%;
+  left: 39%;
+  font-size: large;
+  background-color: black;
+  text-align: center;
+}
+
+.texto_internacional_india {
+  position: absolute;
+  top: 33%;
+  left: 39%;
+  font-size: large;
+  background-color: black;
+  text-align: center;
+}
+
+.texto_internacional_filipinas {
+  position: absolute;
+  top: 66%;
+  left: 39%;
+  font-size: large;
+  background-color: black;
+  text-align: center;
+}
+
+.texto_internacional_mexico {
+  position: absolute;
+  top: 0%;
+  left: 62%;
+  font-size: large;
+  background-color: black;
+  text-align: center;
+}
+
+.texto_internacional_eeuu {
+  position: absolute;
+  top: 33%;
+  left: 62%;
+  font-size: large;
+  background-color: black;
+  text-align: center;
+}
+
+.texto_internacional_brasil {
+  position: absolute;
+  top: 66%;
+  left: 62%;
+  font-size: large;
+  background-color: black;
+  text-align: center;
+}
+
+.texto_internacional_egipto {
+  position: absolute;
+  top: 0%;
+  left: 84%;
+  font-size: large;
+  background-color: black;
+  text-align: center;
+}
+
+.texto_internacional_sudafrica {
+  position: absolute;
+  top: 33%;
+  left: 84%;
+  font-size: large;
+  background-color: black;
+  text-align: center;
+}
+
+.texto_internacional_zimbabue {
+  position: absolute;
+  top: 66%;
+  left: 84%;
+  font-size: large;
+  background-color: black;
+  text-align: center;
+}
+
+.volkswagen_virtus {
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.armado_paq_index {
+  border: 2px black solid;
+}
+
+.armado_paq_index h2 {
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+.armado_paq_index div {
+  display: inline-block;
+  margin: 7px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.button-ancho {
+  margin-left: 3%;
+  width: 6%;
+  height: 3vh;
+  background-color: white;
+}
+
+.button-ancho2 {
+  margin-left: 8px;
+  font-size: 18px;
+  width: 80px;
+  background-color: aqua;
+}
+
+.button-ancho3 {
+  margin-left: 10px;
+  font-size: 20px;
+  width: 120px;
+  background-color: aqua;
+}
+
+.encabezado_sector {
+  text-align: center;
+}
+
+.encabezado_sector label {
+  font-size: large;
+  font-family: sans-serif;
+}
+
+.encabezado_sector select {
+  font-size: large;
+  font-family: sans-serif;
+}
+
+.encabezado_sector input {
+  font-size: large;
+  font-family: sans-serif;
+}
+
+.titulos_menores {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+  padding: 1%;
+}
+
+.galeria_index {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.galeria_index img {
+  width: 33%;
+  overflow: auto;
+}
+
+.texto_salta {
+  top: 6%;
+  left: 10%;
+}
+
+.texto_bariloche {
+  top: 6%;
+  left: 45%;
+}
+
+.texto_cataratas {
+  top: 6%;
+  left: 80%;
+}
+
+.texto_madrid {
+  top: 6%;
+  left: 10%;
+}
+
+.texto_italia {
+  top: 6%;
+  left: 45%;
+}
+
+.texto_qatar {
+  top: 6%;
+  left: 80%;
+}
+
+.galeria_index a {
+  text-decoration: none;
+}
+
+.setup_footer {
+  background-color: rgb(228, 198, 198);
+  display: flex;
 }
 
 .divs_footer {
-    width: 33%;
+  width: 33%;
 }
