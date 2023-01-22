@@ -5,39 +5,72 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paquetes Internacionales</title>
-  <!--Css Personal-->
-  <link rel="stylesheet" href="../css/style.css" />
+  <title>Agencia De Viajes</title>
+  <!--CDN Animate CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!--CDN Bootstrap Estilo Flatly-->
+  <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
   <!--Cdn Font Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Css Personal (Al final del head)-->
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
   <header>
-    <nav>
-      <ul class="menuNavegador">
-        <li>
-          <img src="../assets/img/logo.png" alt="logoplaceholder" />
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/img/Logo.jpg" height="50" alt="Logo Max Baires" />
+        </a>
+        <a class="navbar-brand wow animate__animated animate__lightSpeedInLeft" href="../index.html"><strong>Max
+            Baires</strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+          aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="../index.html">Inicio
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/paq_Internacionales.html">Paquetes Internacionales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/paq_nacionales.html">Paquetes Nacionales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/traslados.html">Traslados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/alojamiento.html">Alojamiento</a>
+            </li>
+            <!-- Pagina reservas (Futura)-->
+            <li class="nav-item d-flex">
+              <a class="nav-link" href="../index.html">Mis Reservas</a>
+            </li>
+            <!-- Pagina inicio sesión (Futura)-->
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Ingresa!</a>
+            </li>
+            <!-- Pagina registro (Futura)-->
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Registrate!</a>
+            </li>
+        </div>
         </li>
-        <li>
-          <h1>Max Baires</h1>
-        </li>
-        <li><a href="../index.html">Inicio</a></li>
-        <li>
-          <a style="background-color: aqua;" href="../pages/paq_Internacionales.html">Paquetes Internacionales
-          </a>
-        </li>
-        <li>
-          <a href="../pages/paq_nacionales.html">Paquetes Nacionales</a>
-        </li>
-        <li><a href="../pages/traslados.html">Traslados</a></li>
-        <li><a href="../pages/alojamiento.html">Alojamiento</a></li>
-        <li class="buttonsNav">Mis Reservas</li>
-        <li class="buttonsNav">Ingresá!</li>
-        <li class="buttonsNav">Registrate!</li>
-      </ul>
+        </ul>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+      </div>
+      </div>
     </nav>
   </header>
   <main>
@@ -168,34 +201,90 @@
 
     </section>
   </main>
-  <footer class="setup_footer">
-    <div class="divs_footer">
-      <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i
-          class="fa-brands fa-facebook fa-4x"></i></a>
-      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i
-          class="fa-brands fa-instagram fa-4x"></i></a>
-      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i
-          class="fa-brands fa-twitter fa-4x"></i></a>
-      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><i
-          class="fa-brands fa-youtube fa-4x"></i></a>
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Mi Changuito</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./assets/img/brasil.jpg" class="img-fluid rounded-start" alt="Imagen Card brasil">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Paquete Seleccionado</h5>
+                  <p class="card-text">Descripcion del paquete seleccionado.</p>
+                  <p class="card-text">Precio del paquete.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+          <button type="button" class="btn btn-primary">Guardar Cambios</button>
+        </div>
+      </div>
     </div>
-    <div class="divs_footer">
-      <p>
-        Derechos Reservados, avisos legales, acerca de nosotros...
-      <div></div>
-      terminos y condiciones de compras de servicios turisticos
-      </p>
-    </div>
-    <div class="divs_footer">
-      <p>
-        <i class="fa-solid fa-phone"></i>
-        Servicio venta: 0800...
-      <div></div>
-      <i class="fa-solid fa-phone"></i>
-      Servicio posventa: 0800...
-      </p>
+  </div>
+  <!--Cierre del Modal-->
+  <footer>
+    <div class="container p-3">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <h4 class="mb-3 footer-title">Derechos y condiciones de compra en Max Baires</h4>
+          <p>
+            Avisos legales (terminos y condiciones de compra de servicios turisticos)
+          </p>
+          <p>
+            Derechos Reservados, Copyright, Acerca de nosotros, ETC.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="mb-3">Contactanos</h4>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-1">
+              <i class="fa-solid fa-phone"></i>
+              Servicio venta: 0800-...
+            </li>
+            <li class="mb-1">
+              <i class="fa-solid fa-phone"></i>
+              Servicio posventa: 0800-...
+            </li>
+            <li>
+              <i class="fa-regular fa-envelope"></i>Email: max-baires@...</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="mb-1">Redes Sociales:</h4>
+          <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-facebook fa-3x wow animate__animated animate__lightSpeedInRight"></i></a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-instagram fa-3x wow animate__animated animate__lightSpeedInRight"></i></a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-twitter fa-3x wow animate__animated animate__lightSpeedInRight"></i></a>
+          <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-youtube fa-3x wow animate__animated animate__lightSpeedInRight"></i></a>
+        </div>
+      </div>
     </div>
   </footer>
+  </div>
+  <!-- Wow Js Script-->
+  <script src="../js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <!--Bootstrap Script-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

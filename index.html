@@ -6,66 +6,101 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agencia De Viajes</title>
-  <!--Css Personal-->
-  <link rel="stylesheet" href="./css/style.css" />
+  <!--CDN Animate CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!--CDN Bootstrap Estilo Flatly-->
+  <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
   <!--Cdn Font Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Css Personal (Al final del head)-->
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-  <div class="contenedorGrid">
-    <header class="navegador">
-      <nav>
-        <ul class="menuNavegador">
-          <li>
-            <img src="./assets/img/logo.png" alt="logoplaceholder" />
-          </li>
-          <li>
-            <h1>Max Baires</h1>
-          </li>
-          <li><a class="menuSeleccionado" href="./index.html">Inicio</a></li>
-          <li>
-            <a href="./pages/paq_Internacionales.html">Paquetes Internacionales
-            </a>
-          </li>
-          <li><a href="./pages/paq_nacionales.html">Paquetes Nacionales</a></li>
-          <li><a href="./pages/traslados.html">Traslados</a></li>
-          <li><a href="./pages/alojamiento.html">Alojamiento</a></li>
-          <li><a href="./pages/reservas.html">Mis Reservas</a></li>
-          <li><a href="./pages/iniciosesion.html">Ingresá!</a></li>
-          <li><a href="./pages/iniciosesion.html">Registrate!</a></li>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./assets/img/Logo.jpg" height="50" alt="Logo Max Baires" />
+        </a>
+        <a class="navbar-brand wow animate__animated animate__lightSpeedInLeft" href="./index.html"><strong>Max
+            Baires</strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+          aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Inicio
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/paq_Internacionales.html">Paquetes Internacionales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/paq_nacionales.html">Paquetes Nacionales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/traslados.html">Traslados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/alojamiento.html">Alojamiento</a>
+            </li>
+            <!-- Pagina reservas (Futura)-->
+            <li class="nav-item d-flex">
+              <a class="nav-link" href="./index.html">Mis Reservas</a>
+            </li>
+            <!-- Pagina inicio sesión (Futura)-->
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Ingresa!</a>
+            </li>
+            <!-- Pagina registro (Futura)-->
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Registrate!</a>
+            </li>
+        </div>
+        </li>
         </ul>
-      </nav>
-    </header>
-    <section class="barra">
-      <div class="armado_paq_index">
-        <h2>Armá tu paquete!</h2>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+      </div>
+      </div>
+    </nav>
+  </header>
+  <section class="barra">
+    <div class="container-fluid">
+      <div class="armado_paq_index text-center">
+        <h3 class="wow animate__animated animate__backInRight">Armá tu paquete!</h3>
         <form>
           <fieldset>
             <div>
-              <label for="fechasalida"><strong>
+              <label for="fechasalida" class="barra-start"><strong>
                   <p> Fecha de salida </p>
                 </strong></label>
               <input type="date" name="fechasalida" id="">
             </div>
             <div>
-              <label for="fecharegreso"><strong>
+              <label for="fecharegreso" class="barra-start"><strong>
                   <p>Fecha de llegada</p>
                 </strong></label>
               <input type="date" name="fecharegreso" id="">
             </div>
             <div>
-              <label for="origen"><strong>Salida desde:</strong></label>
+              <label for="origen" class="barra-start"><strong>Salida desde:</strong></label>
               <input type="text" name="origen" id="" value="(origen)" />
             </div>
             <div>
-              <label for="destino"><strong>Destino</strong></label>
+              <label for="destino" class="barra-start"><strong>Destino</strong></label>
               <input type="text" name="destino" id="" value="(destino)" />
             </div>
             <div>
-              <label for=""><strong>Cantidad de personas</strong></label>
+              <label for="" class="barra-start"><strong>Cantidad de personas</strong></label>
               <select name="1-2">
                 <option value="1-2">1-2</option>
                 <option value="3-4">3-4</option>
@@ -73,7 +108,7 @@
               </select>
             </div>
             <div>
-              <label for="alojamiento"><strong>Incluye alojamiento?</strong></label>
+              <label for="alojamiento" class="barra-start"><strong>Incluye alojamiento?</strong></label>
               <div>
                 <label for="opcion_si">Sí</label>
                 <input type="radio" name="alojamiento" id="opcion_si" />
@@ -83,107 +118,214 @@
                 <input type="radio" name="alojamiento" id="opcion_no" />
               </div>
             </div>
-            <button type="submit" class="button-ancho">Enviar!</button>
+            <button type="submit" class="btn btn-primary">Buscar</button>
           </fieldset>
         </form>
       </div>
-    </section>
+  </section>
+  </div>
+  <div class="contenedor_grid_index">
     <section id="ad">
-      <img
-        src="./assets/img/ad.jpg"
-        alt="Publicidad">
+      <img src="./assets/img/ad.jpg" alt="Publicidad">
     </section>
-    <main class="principal">
+    <main class="principal_index">
       <section>
         <div class="encabezado_sector">
-          <h2>Nuestros Destinos Mas Populares</h2>
-          <form action="">
-            Filtro:
-            <select name="Precio">
-              <option value="menoraMayor">Precio Ascendiente</option>
-              <option value="">Precio Descendiente</option>
-              <option value="5-6+">Mayor % Descuento</option>
-            </select>
-            <label for="filtrodestino">Destino</label>
-            <input type="text" name="destino" id="" value="(destino)" />
-          </form>
+          <h3>Nuestros Destinos Mas Populares</h3>
         </div>
       </section>
       <section>
         <h3>
-        <p class="titulos_menores"> Destinos en Argentina </p>
-      </h3>
+          <p class="titulos_menores"> Destinos en Argentina </p>
+        </h3>
+        <form class="form_titulo_index" action="">
+          Filtro:
+          <select name="Precio">
+            <option value="menoraMayor">Precio Ascendiente</option>
+            <option value="">Precio Descendiente</option>
+            <option value="5-6+">Mayor % Descuento</option>
+          </select>
+          <label for="filtrodestino">Destino</label>
+          <input type="text" name="destino" id="" value="(destino)" />
+        </form>
         <section>
-          <div class="galeria_index">
-            <img src="./assets/img/jujuy2.jpg" alt="Imagen Salta y Jujuy">
-            <img src="./assets/img/bariloche2.jpg" alt="Imagen Bariloche">
-            <img src="./assets/img/cataratas2.jpg" alt="Imagen Cataratas">
-            <p class="texto_salta texto">
-              <a href="./pages/paq_nacionales.html">Paquete Salta-Jujuy </a>
-              <a href="./pages/paq_nacionales.html"> $ 500 USD </a>
-
-            <p class="texto_bariloche texto">
-              <a href="./pages/paq_nacionales.html">Paquete Bariloche </a>
-              <a href="./pages/paq_nacionales.html">$ 750 USD </a>
-
-            <p class="texto_cataratas texto">
-              <a href="./pages/paq_nacionales.html">Paquete Cataratas</a>
-              <a href="./pages/paq_nacionales.html">$ 900 USD </a>
-
-          </div>
-          <h3>
-            <p class="titulos_menores"> Descubrí lo que el mundo tiene para ofrecerte con nosotros </p>
-          </h3>
-          <div class="galeria_index">
-            <img src="./assets/img/españa2.jpg" alt="imagen Madrid">
-            <img src="./assets/img/italia2.jpg" alt="Imagen Italia">
-            <img src="./assets/img/qatar2.jpg" alt="imagen Qatar">
-            <p class="texto_madrid texto">
-              <a href="./pages/paq_Internacionales.html">Paquete Madrid </a>
-              
-              <a href="./pages/paq_Internacionales.html">$1000 USD </a>
-            </p>
-            <p class="texto_italia texto">
-              <a href="./pages/paq_Internacionales.html">Paquete Italia </a>
-              
-              <a href="./pages/paq_Internacionales.html">$1300 USD </a>
-            </p>
-            <p class="texto_qatar texto">
-              <a href="./pages/paq_Internacionales.html">Paquete Qatar </a>
-              <a href="./pages/paq_Internacionales.html">$1900 USD </a>
-            </p>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <div class="card text-center">
+                <img src="./assets/img/jujuy2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Paquete Salta-Jujuy</h5>
+                  <p class="card-text">Disfrutá El Tren De Las Nubes, las Salinas Grandes, Purmamarca, el Cerro de los
+                    Siete Colores y todo lo que Salta y Jujuy tienen para
+                    ofrecerte con este paquete. </p>
+                  <p class="card-text"> Precio: $45000 x Persona </p>
+                  <a href="./pages/paq_nacionales.html" class="btn btn-primary transformacion">Reservar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <div class="card text-center">
+                <img src="./assets/img/bariloche4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Paquete Bariloche</h5>
+                  <p class="card-text">Recorré el circuito chico, el Cerro Tronador, el Parque Nahuel Huapi, la Isla
+                    Victoria, el Refugio Frey y mucho mas de lo que Bariloche
+                    te puede ofrecer con este paquete. </p>
+                  <p class="card-text"> Precio: $60000 x Persona </p>
+                  <a href="./pages/paq_nacionales.html" class="btn btn-primary transformacion">Reservar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <div class="card text-center">
+                <img src="./assets/img/cataratas2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Paquete Cataratas</h5>
+                  <p class="card-text">Pasá un fin de semana inolvidable descubriendo todo lo que las Cataratas Del
+                    Iguazú tienen para ofrecerte, incluyendo la Garganta Del Diablo,
+                    el Salto Bernabe Mendez y mucho mas con este paquete.
+                  </p>
+                  <p class="card-text"> Precio: $55000 x Persona </p>
+                  <a href="./pages/paq_nacionales.html" class="btn btn-primary text-center transformacion">Reservar</a>
+                </div>
+              </div>
+            </div>
+            <h3>
+              <p class="titulos_menores"> Descubrí lo que el mundo tiene para ofrecerte con nosotros </p>
+            </h3>
+        </section>
+        <section>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <div class="card text-center">
+                <img src="./assets/img/españa3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Paquete Madrid - Barcelona</h5>
+                  <p class="card-text">Descubrí lo que las dos ciudades mas pobladas de España tienen para ofrecerte,
+                    recorriendo los mejores restaurantes, las mejores
+                    atracciones turisticas y disfrutá de un Clasico inolvidable en el Camp Nou. </p>
+                  <p class="card-text"> Precio: $1000 USD x Persona </p>
+                  <a href="./pages/paq_Internacionales.html" class="btn btn-primary transformacion">Reservar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <div class="card text-center">
+                <img src="./assets/img/italia2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Paquete Italia</h5>
+                  <p class="card-text">Descubrí las leyendas que oculta la tierra Italiana, como el mitico Coliseo
+                    Romano, El Panteón, la Catedral De Milán, la Fontana De
+                    Trevi, la Basilica De San Pedro y viví una experiencia inolvidable con este paquete. </p>
+                  <p class="card-text"> Precio: $1200 USD x Persona </p>
+                  <a href="./pages/paq_Internacionales.html" class="btn btn-primary transformacion">Reservar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <div class="card text-center">
+                <img src="./assets/img/qatar2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Paquete Qatar</h5>
+                  <p class="card-text">Viví la experiencia que el equipo Argentino vivió en el mundial de Qatar 2022,
+                    hospedandoté en las habitaciones en las que se hospedó Argentina y
+                    descubriendo lo que Qatar tiene para ofrecer y disfrutá de un partido en los estadios en los que
+                    Argentina jugó.
+                  </p>
+                  <p class="card-text"> Precio: $1500 USD x Persona </p>
+                  <a href="./pages/paq_Internacionales.html"
+                    class="btn btn-primary text-center transformacion">Reservar</a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
-    </main>
-    <footer class="setup_footer">
-      <div class="divs_footer">
-        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i
-            class="fa-brands fa-facebook fa-4x"></i></a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i
-            class="fa-brands fa-instagram fa-4x"></i></a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i
-            class="fa-brands fa-twitter fa-4x"></i></a>
-        <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><i
-            class="fa-brands fa-youtube fa-4x"></i></a>
-      </div>
-      <div class="divs_footer">
-        <p>
-          Derechos Reservados, avisos legales, acerca de nosotros...
-        <div></div>
-        terminos y condiciones de compras de servicios turisticos
-        </p>
-      </div>
-      <div class="divs_footer">
-        <p>
-          <i class="fa-solid fa-phone"></i>
-          Servicio venta: 0800...
-        <div></div>
-        <i class="fa-solid fa-phone"></i>
-        Servicio posventa: 0800...
-        </p>
-      </div>
-    </footer>
   </div>
+  </main>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Mi Changuito</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./assets/img/brasil.jpg" class="img-fluid rounded-start" alt="Imagen Card brasil">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Paquete Seleccionado</h5>
+                  <p class="card-text">Descripcion del paquete seleccionado.</p>
+                  <p class="card-text">Precio del paquete.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+          <button type="button" class="btn btn-primary">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Cierre del Modal-->
+  <footer>
+    <div class="container p-3">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <h4 class="mb-3 footer-title">Derechos y condiciones de compra en Max Baires</h4>
+          <p>
+            Avisos legales (terminos y condiciones de compra de servicios turisticos)
+          </p>
+          <p>
+            Derechos Reservados, Copyright, Acerca de nosotros, ETC.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="mb-3">Contactanos</h4>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-1">
+              <i class="fa-solid fa-phone"></i>
+              Servicio venta: 0800-...
+            </li>
+            <li class="mb-1">
+              <i class="fa-solid fa-phone"></i>
+              Servicio posventa: 0800-...
+            </li>
+            <li>
+              <i class="fa-regular fa-envelope"></i>Email: max-baires@...</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="mb-1">Redes Sociales:</h4>
+          <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-facebook fa-3x wow animate__animated animate__lightSpeedInRight"></i></a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-instagram fa-3x wow animate__animated animate__lightSpeedInRight"></i></a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-twitter fa-3x wow animate__animated animate__lightSpeedInRight"></i></a>
+          <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer"><i
+              class="fa-brands fa-youtube fa-3x wow animate__animated animate__lightSpeedInRight"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <!-- Wow Js Script-->
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <!--Bootstrap Script-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

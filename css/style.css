@@ -4,19 +4,18 @@
   box-sizing: border-box;
 }
 
+nav {
+  justify-content: center;
+}
+
 .contenedorGrid {
   display: grid;
   grid-template-columns: 7fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
-    "header header"
     "searchbar searchbar"
     "principal ad"
     "footer footer";
-}
-
-.navegador {
-  grid-area: header;
 }
 
 .armado_paq_index label {
@@ -24,14 +23,12 @@
 }
 
 .barra {
-  grid-area: searchbar;
   background-color: rgb(9, 9, 141);
-  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-#ad {
-  grid-area: ad;
-}
+
 
 #ad img {
   display: flex;
@@ -39,7 +36,7 @@
   height: 100%;
 }
 
-.principal {
+.principal_index {
   grid-area: principal;
 }
 
@@ -545,11 +542,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.armado_paq_index {
-  border: 2px black solid;
-}
 
-.armado_paq_index h2 {
+.armado_paq_index h3 {
   text-align: center;
   color: white;
   font-family: sans-serif;
@@ -559,7 +553,12 @@
   display: inline-block;
   margin: 7px;
   padding: 5px;
-  font-size: 20px;
+  font-size: large;
+}
+
+.btn-primary {
+  background-color: white;
+  color: black;
 }
 
 .button-ancho {
@@ -588,23 +587,25 @@
 }
 
 .encabezado_sector label {
-  font-size: large;
+  font-size: medium;
   font-family: sans-serif;
 }
 
 .encabezado_sector select {
-  font-size: large;
-  font-family: sans-serif;
+  font-size: medium;
+}
+
+.form_titulo_index {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .encabezado_sector input {
   font-size: large;
-  font-family: sans-serif;
 }
 
 .titulos_menores {
   display: flex;
-  font-family: sans-serif;
   justify-content: center;
   padding: 1%;
 }
@@ -661,4 +662,64 @@
 
 .divs_footer {
   width: 33%;
+  display: inline-block;
+}
+
+footer {
+  background-color: #deded5;
+}
+
+nav {
+  background-color: #deded5;
+}
+
+.contenedor_grid_index {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "principal ad";
+}
+
+#ad {
+  grid-area: ad;
+}
+
+.barra-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card {
+  padding: 0;
+  margin: 0;
+}
+
+.animate__animatedanimate__bounce {
+  --animate-duration: 3s;
+}
+
+.transformacion:hover {
+  background-color: green;
+  transition: 2s;
+}
+
+.card-title-index {
+  text-align: center;
+}
+
+.btn-card {
+  align-self: center;
+}
+
+@media (max-width: 767px) {
+  .contenedor_grid_index {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "ad ad"
+      "principal principal";
+  }
+
+  #ad {
+    max-height: 200px;
+  }
 }
