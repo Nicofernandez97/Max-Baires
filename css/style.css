@@ -151,38 +151,6 @@ nav {
   margin-left: 5%;
 }
 
-.galeria_paq_internacionales {
-  display: flex;
-  flex-direction: row;
-  height: 55rem;
-  position: relative;
-}
-
-.galeria_paq_internacionales-titulo1 {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 130%;
-}
-
-.galeria_paq_internacionales-titulo2 div {
-  display: inline-block;
-  margin-left: 15.5%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 110%;
-}
-
-.galeria_paq_internacionales img {
-  height: 33%;
-}
-
-.galeria_paq_internacionales form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 10%;
-  font-size: large;
-}
-
 .galeria_traslados {
   display: flex;
   flex-direction: row;
@@ -314,16 +282,6 @@ nav {
 .button_alquiler_auto {
   background-color: rgb(253, 237, 5);
   font-size: larger;
-}
-
-.galeria_paq_internacionales-columnas {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 18%;
-  margin-right: 5%;
-  height: 55rem;
-  position: relative;
 }
 
 .texto {
@@ -680,6 +638,22 @@ nav {
   grid-template-areas: "principal ad";
 }
 
+.contenedor_grid_internacional {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "principal_internacional ad_internacional";
+}
+
+#ad_internacional {
+  grid-area: ad_internacional;
+}
+
+.principal_internacional {
+  grid-area: principal_internacional;
+}
+
+
 #ad {
   grid-area: ad;
 }
@@ -719,7 +693,36 @@ nav {
       "principal principal";
   }
 
+  .contenedor_grid_internacional {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "ad_internacional ad_internacional"
+      "principal_internacional principal_internacional";
+  }
+
+  #ad_internacional {
+    max-height: 200px;
+  }
+
   #ad {
     max-height: 200px;
   }
+
+  .carrousel_label {
+    font-size: medium;
+  }
+}
+
+#ad_internacional img {
+  width: 100%;
+  height: 100%;
+}
+
+.carrousel_label span {
+  color: black;
+  background-color: white;
+}
+
+.contenedor_grid_internacional a {
+  text-decoration: none;
 }
