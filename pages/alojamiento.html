@@ -74,122 +74,154 @@
     </nav>
   </header>
   <main>
-    <section>
-      <div class="ad_front">
-        <img class="ad_index" src="../assets/img/coca1.jpg" alt="" />
-        <img class="ad_index" src="../assets/img/coca2.jpg" alt="" />
+    <section class="barra">
+      <div class="container-fluid">
+        <div class="armado_barra_traslados">
+          <h3> <strong>Elegí tu alojamiento soñado </strong> </h3>
+          <form>
+            <fieldset>
+              <div>
+                <label for="destino"><strong>Destino</strong></label>
+                <input type="text" name="destino" id="" value="(destino)" />
+              </div>
+              <div>
+                <label for=""><strong>Tipo de alojamiento</strong></label>
+                <select name="1-2">
+                  <option value="hotel">Hotel</option>
+                  <option value="hostel">Hostel</option>
+                  <option value="particular">Particular</option>
+                </select>
+              </div>
+              <div>
+                <label for="desde"><strong>Desde</strong></label>
+                <input type="date" name="desde" id="">
+              </div>
+              <div>
+                <label for="hasta"><strong>Hasta</strong></label>
+                <input type="date" name="hasta" id="">
+              </div>
+              <div>
+                <label for="cant_habitaciones"><strong>Cantidad de habitaciones</strong></label>
+                <select name="1">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </div>
+              <div>
+                <label for=""><strong>Numero de personas</strong></label>
+                <select name="Gama Alta">
+                  <option value="adnomen">0-2 Adultos y 0 Menores</option>
+                  <option value="midadymen">1-2 Adultos y 1-2 Menores</option>
+                  <option value="muchosadymen">+2 Adultos y +2 Menores</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary text-center">Buscar</button>
+            </fieldset>
+          </form>
+        </div>
       </div>
     </section>
-    <section>
-      <div class="armado_paq_index">
-        <h2> <strong>Elegí tu alojamiento soñado </strong> </h2>
-        <form>
-          <fieldset>
-            <div>
-              <label for="destino"><strong>Destino</strong></label>
-              <input type="text" name="destino" id="" value="(destino)" />
-            </div>
-            <div>
-              <label for=""><strong>Tipo de alojamiento</strong></label>
-              <select name="1-2">
-                <option value="hotel">Hotel</option>
-                <option value="hostel">Hostel</option>
-                <option value="particular">Particular</option>
-              </select>
-            </div>
-            <div>
-              <label for="desde"><strong>Desde</strong></label>
-              <input type="date" name="desde" id="">
-            </div>
-            <div>
-              <label for="hasta"><strong>Hasta</strong></label>
-              <input type="date" name="hasta" id="">
-            </div>
-            <div>
-              <label for="cant_habitaciones"><strong>Cantidad de habitaciones</strong></label>
-              <select name="1">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-            </div>
-            <div>
-              <label for=""><strong>Numero de personas</strong></label>
-              <select name="Gama Alta">
-                <option value="adnomen">0-2 Adultos y 0 Menores</option>
-                <option value="midadymen">1-2 Adultos y 1-2 Menores</option>
-                <option value="muchosadymen">+2 Adultos y +2 Menores</option>
-              </select>
-            </div>
-            <button type="submit" class="button-ancho3">Buscar</button>
-          </fieldset>
-        </form>
-      </div>
-      <div class="galeria_alojamiento">
+
+    <div class="text-center">
+      <h3> Hospedate Con Nuestros Partners </h3>
+    </div>
+
+    <div class="contenedor_grid_traslados">
+      <section class="traslados_form text-center">
         <form action="">
-          <label class="titulo_alojamiento_form" for="titulo_alojamiento"><strong>Hospedate con nuestros
-              partners</strong></label>
-          <br>
-          <br>
-          <label for="nombre_alojamiento"><strong>Filtro por nombre</strong></label>
-          <br>
+          <label for="titulo_traslados_form"><strong>Personalizá Tu Alojamiento</strong></label>
+          <label for="nombre_alojamiento"><strong>Filtrar Por Nombre</strong></label>
           <input type="text" name="nombre_alojamiento" id="" value="(nombre alojamiento)" />
-          <br>
-          <label for="buscar_estrellas"><strong> Buscar por estrellas</strong></label>
-          <label for="5estrellas">5 Estrellas</label>
-          <input type="radio" name="estrellas" id="alta_gama" />
-          <label for="4estrellas">4 Estrellas</label>
-          <input type="radio" name="estrellas" id="media_gama" />
-          <label for="3estrellas">3 Estrellas</label>
-          <input type="radio" name="estrellas" id="baja_gama" />
-          <label for="hostel">Hostel</label>
-          <input type="radio" name="hostel_o_particular" id="hosteloparticular" />
-          <label for="particular">Particular</label>
-          <input type="radio" name="hostel_o_particular" id="hostel_o_particular" />
-          <button type="button-ancho3">Buscar</button>
+          <label for="nombre_destino"><strong>Filtrar Por Destino</strong></label>
+          <input type="text" name="nombre_destino" id="" value="(nombre alojamiento)" />
+          <label for="">Filtrar por Tipo</label>
+          <select name="Hotel 5 Estrellas">
+            <option value="5-estrellas">Hotel 5 Estellas</option>
+            <option value="4-estrellas">Hotel 4 Estellas </option>
+            <option value="3-estrellas">Hotel 3 Estellas</option>
+            <option value="hostel">Hostel</option>
+            <option value="particular">Particular</option>
+          </select>
           <label for="buscar_precio_alo"><strong>Precio Por Noche</strong></label>
           <select name="buscar_precio">
             <option value="precio1alo">0-15000$ x Noche</option>
             <option value="precio2alo">15000-30000$ x Noche</option>
             <option value="precio3alo">30000$+ x Noche</option>
           </select>
+          <label for="">Rango De Precios </label>
+          <input type="range" class="form-range" id="customRange1">
+          <label for="customRange1" class="form-label text-center">$0 a $45000 x noche</label>
+          <button type="submit" class="btn btn-primary text-center">Filtrar</button>
         </form>
-        <div class="galeria_alojamiento-columna2">
-          <img src="../assets/img/hotel_hilton.jpg" alt="">
-          <img src="../assets/img/hoteles_sheraton.jpg" alt="">
-          <img src="../assets/img/Millhouse_hostel.jpg" alt="">
+      </section>
+      <aside id="ad_traslados">
+        <img src="../assets/img/ad.jpg" alt="banner">
+      </aside>
+      <div class="traslados_content">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-8">
+              <img src="../assets/img/sheraton1920x1080.jpg" class="img-fluid rounded-start" alt="Hoteles Sheraton">
+            </div>
+            <div class="col-md-4">
+              <div class="card-body">
+                <h5 class="card-title text-center"><strong> Hotel Sheraton </strong></h5>
+                <p class="card-text">Ubicado en el barrio de Retiro,el Sheraton Buenos Aires Hotel
+                  ofrece fácil acceso a los principales museos, plazas, tiendas y restaurantes. Hospedandosé aquí se
+                  encontrará
+                  a pocos pasos de la Torre Monumental y de los viajes en Buquebus a Uruguay.
+                </p>
+                <p class="card-text text-center">Precio: 63500$ Por Noche</p>
+                <button type="submit" class="btn btn-secondary boton_alquiler">Reserva!</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="galeria_alojamiento-columna3">
-          <p>Hoteles Hilton
-            <br>
-            (Descripcion localidades disponibles del hotel, puntuacion / estrellas )
-          </p>
-          <p>Hoteles Sheraton
-            <br>
-            (Descripcion localidades disponibles del hotel, puntuacion / estrellas )
-          </p>
-          <p>Millhouse Hostel Avenue
-            <br>
-            (Descripcion localidades disponibles del hostel, puntuacion / estrellas )
-          </p>
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-8">
+              <img src="../assets/img/faena1920x1080.jpg" class="img-fluid rounded-start" alt="Hotel Faena">
+            </div>
+            <div class="col-md-4">
+              <div class="card-body">
+                <h5 class="card-title text-center"><strong> Hotel Faena </strong></h5>
+                <p class="card-text">El Faena Hotel Buenos Aires se encuentra en el barrio de Puerto Madero de Buenos
+                  Aires, el cual es un reconocido establecimiento
+                  de 5 estrellas provisto de un diseño y una decoración muy exclusiva que es palpable tanto en sus zonas
+                  comunes como en sus habitaciones.
+                </p>
+                <p class="card-text text-center">Precio: 75000$ Por Noche</p>
+                <button type="submit" class="btn btn-secondary boton_alquiler">Reserva!</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="galeria_alojamiento-columna4">
-          <p>$$$-----
-            <br>
-            <button class="button_alquiler_auto"><strong>Reserva! </strong></button>
-          </p>
-          <p>$$-----
-            <br>
-            <button class="button_alquiler_auto"><strong>Reserva! </strong></button>
-          </p>
-          <p>$-----
-            <br>
-            <button class="button_alquiler_auto"><strong>Reserva! </strong></button>
-          </p>
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-8">
+              <img src="../assets/img/hostel1920x1080.jpg" class="img-fluid rounded-start" alt="Hostel Colonial">
+            </div>
+            <div class="col-md-4">
+              <div class="card-body">
+                <h5 class="card-title text-center"><strong> Hostel Colonial </strong></h5>
+                <p class="card-text">Con un ambiente familiar y tranquilo, el Hostel Colonial en Buenos Aires abre sus
+                  puertas para aquellos
+                  viajeros que buscan un espacio donde sentirse como en casa.
+                  Ubicado en el Microcentro porteño, centro de la ciudad y principal punto de conexión con los barrios y
+                  atractivos de Buenos Aires Capital, cuenta con todas las líneas de subte, fácil acceso a numerosas
+                  líneas de colectivos,
+                  y está a una cuadra de la calle Florida </p>
+                <p class="card-text text-center">Precio: 9000$ Por Noche</p>
+                <button type="submit" class="btn btn-secondary boton_alquiler">Reserva!</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+    </div>
   </main>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
