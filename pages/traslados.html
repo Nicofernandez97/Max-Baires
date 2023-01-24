@@ -74,19 +74,13 @@
     </nav>
   </header>
   <main>
-    <section>
-      <div class="ad_front">
-        <img class="ad_index" src="../assets/img/coca1.jpg" alt="" />
-        <img class="ad_index" src="../assets/img/coca2.jpg" alt="" />
-      </div>
-    </section>
-    <section>
-      <div class="armado_paq_index">
-        <h2> <strong>Viaja de la manera mas comoda con nuestros choferes </strong> </h2>
+    <section class="barra">
+      <div class="container-fluid">
+      <div class="armado_barra_traslados">
+        <h3 class="text-center"> <strong>Viaja de la manera mas comoda con nuestros choferes </strong> </h3>
         <form>
           <fieldset>
             <div>
-
               <label for="origen"><strong>Salida desde:</strong></label>
               <input type="text" name="origen" id="" value="(origen)" />
             </div>
@@ -125,21 +119,29 @@
                 <option value="gama_baja_2">Peugeot 206</option>
               </select>
             </div>
-            <button type="submit" class="button-ancho2">Buscar</button>
+            <button type="submit" class="btn btn-primary text-center">Buscar</button>
           </fieldset>
         </form>
       </div>
+      </div>
     </section>
-    <section>
-      <div class="galeria_traslados">
+    <div class="titulo_traslados_content text-center">
+     <h3> Alquilá Tu Vehiculo! </h3>
+    </div>
+    <div class="contenedor_grid_traslados">
+      <aside id="ad_traslados" >
+        <img src="../assets/img/ad.jpg" alt="banner">
+      </aside>
+    <section class="traslados_form text-center" >
+     
         <form action="">
-          <label class="titulo_traslados_form" for="Titulo"><strong>Alquila Tu Vehiculo!</strong></label>
-          <br>
-          <br>
+          <label class="titulo_traslados_form" for="Titulo"><strong>Personalizá Tu Viaje</strong></label>
+
+
           <label for=""><strong>Filtrar Por Modelo</strong></label>
-          <br>
+
           <label for="">Vehiculo/Camioneta</label>
-          <br>
+
           <select name="Volkswagen Virtus">
             <option value="Gama-alta-1">Volkswagen Virtus</option>
             <option value="Gama_alta_2">Chevrolet Cruze Rs </option>
@@ -148,11 +150,11 @@
             <option value="gama_baja_1">Hyundai i30</option>
             <option value="gama_baja_2">Peugeot 206</option>
           </select>
-          <br>
+
           <label for="lugar_retiro"><strong>Lugar de retiro</strong></label>
-          <br>
+
           <input type="text" name="lugar_retiro" id="" value="Lugar de retiro..." />
-          <br>
+
           <label for="gama_vehiculo"><strong> Gama Del Vehiculo</strong></label>
           <label for="gama_alta">Gama Alta</label>
           <input type="radio" name="gama_vehiculo" id="alta_gama" />
@@ -167,45 +169,68 @@
             <option value="precio2">10000-20000$</option>
             <option value="precio3">20000$ +</option>
           </select>
+            <p class="mini_titulo_form_traslados text-center">Rango De Precios</p>
+          <input type="range" class="form-range" id="customRange1">
+          <label for="customRange1" class="form-label text-center">$1 a $15000</label>
+          <button type="submit" class="btn btn-primary text-center">Filtrar</button>
         </form>
-        <div class="galeria_traslados-columna2">
-          <img src="../assets/img/volkswagen_virtus.jpg" alt="">
-          <img src="../assets/img/chevrolet_cruze_rs.jpg" alt="">
-          <img src="../assets/img/nissan_march.jpg" alt="">
-        </div>
-
-        <div class="galeria_traslados-columna3">
-          <p>Auto: Wolksvagen Virtus
-            <br>
-            (Descripcion auto y cobertura seguro)
-          </p>
-          <p>Auto: Chevrolet Cruze RS
-            <br>
-            (Descripcion auto y cobertura seguro)
-
-          </p>
-          <p>Auto: Nissan March
-            <br>
-            (Descripcion auto y cobertura seguro)
-          </p>
-
-        </div>
-        <div class="galeria_traslados-columna4">
-          <p>$$-----
-            <br>
-            <button class="button_alquiler_auto"><strong>Alquila! </strong></button>
-          </p>
-          <p>$$$-----
-            <br>
-            <button class="button_alquiler_auto"><strong>Alquila! </strong></button>
-          </p>
-          <p>$-----
-            <br>
-            <button class="button_alquiler_auto"><strong>Alquila! </strong></button>
-          </p>
+        </section>
+        <div class="traslados_content">
+          <div class="card mb-3" >
+            <div class="row g-0">
+              <div class="col-md-8">
+                <img src="../assets/img/chevrolet1920x1080.jpg" class="img-fluid rounded-start" alt="Chevrolet">
+              </div>
+              <div class="col-md-4">
+                <div class="card-body">
+                  <h5 class="card-title text-center"><strong> Chevrolet Cruze </strong></h5>
+                  <p class="card-text">Disfrutá de tu viaje de una manera unica con nuestro Chevrolet Cruze, que cuenta con conectividad WI-FI,
+                    frenado automatico de emergencia, cámara de visión trasera digital y un motor turbo de 153CV.
+                  </p>
+                  <p class="card-text text-center">Precio: 6500$ Por Día</p>
+                  <button type="submit" class="btn btn-secondary boton_alquiler">Alquila!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" >
+            <div class="row g-0">
+              <div class="col-md-8">
+                <img src="../assets/img/virtus1920x1080.jpg" class="img-fluid rounded-start" alt="Virtus">
+              </div>
+              <div class="col-md-4">
+                <div class="card-body">
+                  <h5 class="card-title text-center"><strong> Wolksvagen Virtus </strong></h5>
+                  <p class="card-text">Disfrutá de viaje con nuestro Wolksvagen Virtus, una perfecta combinación de tecnología, innovación y tradición, con un motor 250TSI
+                    y una potencia de 150CV, Park Pilot, Keyless Start & Go, Pantalla de información activa y mucho más.
+                  </p>
+                  <p class="card-text text-center">Precio: 7500$ Por Día</p>
+                  <button type="submit" class="btn btn-secondary boton_alquiler">Alquila!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" >
+            <div class="row g-0">
+              <div class="col-md-8">
+                <img src="../assets/img/nissanmarch1920x1080.jpg" class="img-fluid rounded-start" alt="NissanMarch">
+              </div>
+              <div class="col-md-4">
+                <div class="card-body">
+                  <h5 class="card-title text-center"><strong> Nissan March </strong></h5>
+                  <p class="card-text">Disfrutá de tu viaje con nuestros Nissan March, que cuenta con un motor de 106HP, un sistema completo de seguridad activa que cuenta
+                    con 6 AirBags, camara de reversa, sistema de frenado y mucho más. </p>
+                  <p class="card-text text-center">Precio: 4000$ Por Día</p>
+                  <button type="submit" class="btn btn-secondary boton_alquiler">Alquila!</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      
     </section>
+    </div>
   </main>
    <!-- Modal -->
    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -219,7 +244,7 @@
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="./assets/img/brasil.jpg" class="img-fluid rounded-start" alt="Imagen Card brasil">
+                <img src="../assets/img/brasil.jpg" class="img-fluid rounded-start" alt="Imagen Card brasil">
               </div>
               <div class="col-md-8">
                 <div class="card-body">

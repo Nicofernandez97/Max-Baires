@@ -18,9 +18,41 @@ nav {
     "footer footer";
 }
 
+#ad_nacionales img {
+  width: 100%;
+  max-height: 300px;
+}
+
+.contenedor_grid_nacionales {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "principal_nacionales"
+    "segunda_nacionales"
+    "ad_nacionales"
+    "tercera_nacionales";
+}
+
+.principal_nacionales {
+  grid-area: principal_nacionales;
+}
+
+.segunda_nacionales {
+  grid-area: segunda_nacionales;
+}
+
+.tercera_nacionales {
+  grid-area: tercera_nacionales;
+}
+
 .armado_paq_index label {
   color: white;
 }
+
+#ad_nacionales {
+  grid-area: ad_nacionales;
+}
+
 
 .barra {
   background-color: rgb(9, 9, 141);
@@ -42,6 +74,44 @@ nav {
 
 .setup_footer {
   grid-area: footer;
+}
+
+.contenedor_grid_traslados {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "form content ad";
+}
+
+.traslados_content {
+  grid-area: content;
+}
+
+#ad_traslados {
+  grid-area: ad;
+}
+
+#ad_traslados img {
+  width: 100%;
+  height: 100%;
+}
+
+.mini_titulo_form_traslados {
+  font-size: large;
+}
+
+.traslados_form {
+  align-self: center;
+}
+
+.boton_alquiler {
+  margin-left: 50%;
+  background-color: pink;
+  color: red;
+}
+
+.traslados_form {
+  grid-area: form;
 }
 
 .menuNavegador {
@@ -71,84 +141,6 @@ nav {
   font-size: 2vh;
   text-decoration: none;
   padding: 3px;
-}
-
-.buttonsNav {
-  font-size: 35px;
-  border: solid 3px black;
-  padding: 3px;
-}
-
-.ad_front {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.ad_index {
-  height: 280px;
-  width: 50%;
-}
-
-.galeria_top_nacionales {
-  display: flex;
-  height: 20rem;
-  position: relative;
-}
-
-.galeria_top_nacionales img {
-  width: 18%;
-}
-
-.galeria_top_nacionales .segundaimagen {
-  width: 40%;
-  height: 80%;
-  flex-direction: row;
-  align-self: flex-end;
-}
-
-.galeria_top_nacionales input {
-  flex-direction: column;
-  height: 30px;
-  width: 7%;
-  align-self: center;
-}
-
-.galeria_top_nacionales label {
-  flex-direction: column;
-  align-self: center;
-  height: 30px;
-  text-align: center;
-}
-
-.galeria_middle_nacionales-titulo {
-  height: 3rem;
-  display: flex;
-}
-
-.galeria_middle_nacionales-titulo h3 {
-  font-size: 1.5rem;
-  margin-left: 29%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.galeria_middle_nacionales {
-  height: 20rem;
-  display: flex;
-  position: relative;
-}
-
-.galeria_middle_nacionales form {
-  width: 13%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: large;
-}
-
-.galeria_middle_nacionales img {
-  width: 14%;
-}
-
-.galeria_middle_nacionales-cuarta {
-  margin-left: 5%;
 }
 
 .galeria_traslados {
@@ -295,206 +287,6 @@ nav {
   color: black !important;
 }
 
-.texto_salta a {
-  color: red;
-}
-
-.texto_titulo_top_nacionales {
-  position: absolute;
-  top: 5%;
-  left: 30%;
-  font-size: larger;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.texto_fiestas_norte {
-  position: absolute;
-  top: 5%;
-  left: 13%;
-  font-size: larger;
-  background-color: black;
-}
-
-.texto_fiestas_superoferta {
-  position: absolute;
-  top: 20%;
-  left: 35%;
-  font-size: larger;
-  background-color: black;
-}
-
-.texto_fiestas_sur {
-  position: absolute;
-  top: 5%;
-  left: 68%;
-  font-size: larger;
-  background-color: black;
-}
-
-.texto_fiestas_cataratas {
-  position: absolute;
-  top: 4%;
-  left: 86%;
-  font-size: large;
-  background-color: black;
-}
-
-.texto_norte_salta {
-  position: absolute;
-  top: 5%;
-  left: 15%;
-  font-size: larger;
-  background-color: black;
-}
-
-.texto_norte_tucuman {
-  position: absolute;
-  top: 5%;
-  left: 28%;
-  font-size: larger;
-  background-color: black;
-}
-
-.texto_norte_formosa {
-  position: absolute;
-  top: 5%;
-  left: 43%;
-  font-size: larger;
-  background-color: black;
-}
-
-.texto_patagonia_rionegro {
-  position: absolute;
-  top: 5%;
-  left: 61%;
-  font-size: large;
-  background-color: black;
-}
-
-.texto_patagonia_neuquen {
-  position: absolute;
-  top: 5%;
-  left: 76%;
-  font-size: large;
-  background-color: black;
-}
-
-.texto_patagonia_santacruz {
-  position: absolute;
-  top: 5%;
-  left: 90%;
-  font-size: large;
-  background-color: black;
-}
-
-.texto_internacional_espana {
-  position: absolute;
-  top: 0%;
-  left: 12%;
-  font-size: large;
-  background-color: black;
-  text-align: center;
-}
-
-.texto_internacional_grecia {
-  position: absolute;
-  top: 33%;
-  left: 12%;
-  font-size: large;
-  background-color: black;
-  text-align: center;
-}
-
-.texto_internacional_reino_unido {
-  position: absolute;
-  top: 66%;
-  left: 12%;
-  font-size: large;
-  background-color: black;
-  text-align: center;
-}
-
-.texto_internacional_china {
-  position: absolute;
-  top: 0%;
-  left: 39%;
-  font-size: large;
-  background-color: black;
-  text-align: center;
-}
-
-.texto_internacional_india {
-  position: absolute;
-  top: 33%;
-  left: 39%;
-  font-size: large;
-  background-color: black;
-  text-align: center;
-}
-
-.texto_internacional_filipinas {
-  position: absolute;
-  top: 66%;
-  left: 39%;
-  font-size: large;
-  background-color: black;
-  text-align: center;
-}
-
-.texto_internacional_mexico {
-  position: absolute;
-  top: 0%;
-  left: 62%;
-  font-size: large;
-  background-color: black;
-  text-align: center;
-}
-
-.texto_internacional_eeuu {
-  position: absolute;
-  top: 33%;
-  left: 62%;
-  font-size: large;
-  background-color: black;
-  text-align: center;
-}
-
-.texto_internacional_brasil {
-  position: absolute;
-  top: 66%;
-  left: 62%;
-  font-size: large;
-  background-color: black;
-  text-align: center;
-}
-
-.texto_internacional_egipto {
-  position: absolute;
-  top: 0%;
-  left: 84%;
-  font-size: large;
-  background-color: black;
-  text-align: center;
-}
-
-.texto_internacional_sudafrica {
-  position: absolute;
-  top: 33%;
-  left: 84%;
-  font-size: large;
-  background-color: black;
-  text-align: center;
-}
-
-.texto_internacional_zimbabue {
-  position: absolute;
-  top: 66%;
-  left: 84%;
-  font-size: large;
-  background-color: black;
-  text-align: center;
-}
-
 .volkswagen_virtus {
   font-size: larger;
   font-family: Arial, Helvetica, sans-serif;
@@ -512,6 +304,24 @@ nav {
   margin: 7px;
   padding: 5px;
   font-size: large;
+}
+
+.armado_barra_traslados h3 {
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+.armado_barra_traslados div {
+  display: inline-block;
+  margin: 7px;
+  padding: 5px;
+  font-size: large;
+}
+
+.armado_barra_traslados label {
+  color: white;
+  font-size: x-large;
 }
 
 .btn-primary {
@@ -579,36 +389,6 @@ nav {
   overflow: auto;
 }
 
-.texto_salta {
-  top: 6%;
-  left: 10%;
-}
-
-.texto_bariloche {
-  top: 6%;
-  left: 45%;
-}
-
-.texto_cataratas {
-  top: 6%;
-  left: 80%;
-}
-
-.texto_madrid {
-  top: 6%;
-  left: 10%;
-}
-
-.texto_italia {
-  top: 6%;
-  left: 45%;
-}
-
-.texto_qatar {
-  top: 6%;
-  left: 80%;
-}
-
 .galeria_index a {
   text-decoration: none;
 }
@@ -658,10 +438,6 @@ nav {
   grid-area: ad;
 }
 
-.barra-start {
-  display: flex;
-  justify-content: flex-start;
-}
 
 .card {
   padding: 0;
@@ -704,6 +480,18 @@ nav {
     max-height: 200px;
   }
 
+  .contenedor_grid_traslados {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "ad ad"
+      "form content";
+  }
+
+  #ad_traslados {
+    width: 100%;
+    max-height: 200px;
+  }
+
   #ad {
     max-height: 200px;
   }
@@ -711,6 +499,18 @@ nav {
   .carrousel_label {
     font-size: medium;
   }
+
+  .galeria_paq_internacionales_titulo {
+    font-size: medium;
+  }
+
+  #ad_nacionales img {
+    max-height: 200px;
+  }
+}
+
+.precio_viejo {
+  text-decoration: line-through;
 }
 
 #ad_internacional img {
