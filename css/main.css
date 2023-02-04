@@ -1,0 +1,297 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  justify-content: center;
+}
+
+footer {
+  background-color: rgb(253, 220, 226);
+}
+
+.btn-primary {
+  background-color: white;
+  color: black;
+}
+
+.boton_alquiler {
+  margin-left: 50%;
+  background-color: pink;
+  color: red;
+}
+
+.button_alquiler_auto {
+  background-color: rgb(253, 237, 5);
+  font-size: larger;
+}
+
+.contenedorGrid {
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "searchbar searchbar" "principal ad" "footer footer";
+}
+
+.contenedor_grid_nacionales {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "principal_nacionales" "segunda_nacionales" "ad_nacionales" "tercera_nacionales";
+}
+
+.contenedor_grid_traslados {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "form content ad";
+}
+
+.contenedor_grid_index {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "principal ad";
+}
+
+.contenedor_grid_internacional {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "principal_internacional ad_internacional";
+}
+.contenedor_grid_internacional a {
+  text-decoration: none;
+}
+
+.principal_nacionales {
+  grid-area: principal_nacionales;
+}
+
+.segunda_nacionales {
+  grid-area: segunda_nacionales;
+}
+
+.tercera_nacionales {
+  grid-area: tercera_nacionales;
+}
+
+.principal_index {
+  grid-area: principal;
+}
+
+.setup_footer {
+  grid-area: footer;
+}
+
+.traslados_content {
+  grid-area: content;
+}
+
+.traslados_form {
+  grid-area: form;
+}
+
+.principal_internacional {
+  grid-area: principal_internacional;
+}
+
+#ad {
+  grid-area: ad;
+}
+
+.form_titulo_index {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titulos_menores {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+}
+
+.galeria_index {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+.galeria_index img {
+  width: 33%;
+  overflow: auto;
+}
+.galeria_index a {
+  text-decoration: none;
+}
+
+#ad_nacionales img {
+  width: 100%;
+  max-height: 300px;
+}
+
+#ad_nacionales {
+  grid-area: ad_nacionales;
+}
+
+#ad_traslados {
+  grid-area: ad;
+}
+#ad_traslados img {
+  width: 100%;
+  height: 100%;
+}
+
+#ad_internacional {
+  grid-area: ad_internacional;
+}
+#ad_internacional img {
+  width: 100%;
+  height: 100%;
+}
+
+#ad img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.carrousel_label span {
+  color: black;
+  background-color: white;
+}
+
+.animate__bounce {
+  --animate-duration: 3s;
+}
+
+.transformacion:hover {
+  background-color: green;
+  transition: 2s;
+}
+
+.card {
+  padding: 0;
+  margin: 0;
+}
+
+.card-title-index {
+  text-align: center;
+}
+
+.btn-card {
+  align-self: center;
+}
+
+.mini_titulo_form_traslados {
+  font-size: large;
+}
+
+.titulo_traslados_form {
+  font-size: 130%;
+}
+
+.texto {
+  position: absolute;
+  font-size: larger;
+  background-color: rgb(41, 223, 236);
+  font-family: sans-serif;
+}
+
+.volkswagen_virtus {
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.armado_paq_index h3 {
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+}
+.armado_paq_index div {
+  display: inline-block;
+  margin: 7px;
+  padding: 5px;
+  font-size: large;
+}
+.armado_paq_index label {
+  color: white;
+}
+
+.encabezado_sector {
+  text-align: center;
+}
+.encabezado_sector label {
+  font-size: medium;
+  font-family: sans-serif;
+}
+.encabezado_sector select {
+  font-size: medium;
+}
+.encabezado_sector input {
+  font-size: large;
+}
+
+.traslados_form {
+  align-self: center;
+}
+
+.precio_viejo {
+  text-decoration: line-through;
+}
+
+@media (max-width: 767px) {
+  .contenedor_grid_index {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "ad ad" "principal principal";
+  }
+  .contenedor_grid_internacional {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "ad_internacional ad_internacional" "principal_internacional principal_internacional";
+  }
+  #ad_internacional {
+    max-height: 200px;
+  }
+  .contenedor_grid_traslados {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "ad ad" "form content";
+  }
+  #ad_traslados {
+    width: 100%;
+    max-height: 200px;
+  }
+  .armado_barra_traslados {
+    font-size: medium;
+  }
+  .armado_barra_traslados h3 {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+  }
+  .armado_barra_traslados div {
+    display: inline-block;
+    margin: 7px;
+    padding: 5px;
+    font-size: large;
+  }
+  .armado_barra_traslados label {
+    color: white;
+    font-size: x-large;
+  }
+  #ad {
+    max-height: 200px;
+  }
+  .carrousel_label {
+    font-size: medium;
+  }
+  .galeria_paq_internacionales_titulo {
+    font-size: medium;
+  }
+  #ad_nacionales img {
+    max-height: 200px;
+  }
+}/*# sourceMappingURL=main.css.map */

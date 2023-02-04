@@ -15,10 +15,11 @@
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--Css Personal (Al final del head)-->
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/main.css" />
 </head>
 
 <body>
+
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -65,69 +66,12 @@
         </div>
         </li>
         </ul>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
       </div>
       </div>
     </nav>
   </header>
+
   <main>
-    <section class="barra">
-      <div class="container-fluid">
-        <div class="armado_barra_traslados">
-          <h3 class="text-center"> <strong>Viaja de la manera mas comoda con nuestros choferes </strong> </h3>
-          <form>
-            <fieldset>
-              <div>
-                <label for="origen"><strong>Salida desde:</strong></label>
-                <input type="text" name="origen" id="" value="(origen)" />
-              </div>
-              <div>
-                <label for="destino"><strong>Destino</strong></label>
-                <input type="text" name="destino" id="" value="(destino)" />
-              </div>
-              <div>
-                <label for="fecha_hora_salida"><strong>Fecha de Salida</strong></label>
-                <input type="date" name="fecha_hora_salida" id="">
-              </div>
-              <div>
-                <label for=""><strong>Cantidad de personas</strong></label>
-                <select name="1-2">
-                  <option value="1-3">1-3</option>
-                  <option value="4-6">4-6</option>
-                  <option value="6+">6+</option>
-                </select>
-              </div>
-              <div>
-                <label for=""><strong>Gama Del Vehiculo</strong></label>
-                <select name="Gama Alta">
-                  <option value="gamaalta">Gama Alta</option>
-                  <option value="gamamedia">Gama Media</option>
-                  <option value="Gamabaja">Gama Baja</option>
-                </select>
-              </div>
-              <div>
-                <label for=""><strong>Vehiculo/Camioneta</strong></label>
-                <select name="Volkswagen Virtus">
-                  <option value="Gama-alta-1">Volkswagen Virtus</option>
-                  <option value="Gama_alta_2">Chevrolet Cruze Rs </option>
-                  <option value="gama_media_1">Renault Logan</option>
-                  <option value="gama_media_2">Nissan March</option>
-                  <option value="gama_baja_1">Hyundai i30</option>
-                  <option value="gama_baja_2">Peugeot 206</option>
-                </select>
-              </div>
-              <button type="submit" class="btn btn-primary text-center">Buscar</button>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-    </section>
-    <div class="text-center">
-      <h3> Alquilá Tu Vehiculo! </h3>
-    </div>
     <div class="contenedor_grid_traslados">
       <aside id="ad_traslados">
         <img src="../assets/img/ad.jpg" alt="banner">
@@ -167,6 +111,9 @@
         </form>
       </section>
       <div class="traslados_content">
+        <div class="text-center">
+          <h3> Alquilá Tu Vehiculo! </h3>
+        </div>
         <div class="card mb-3">
           <div class="row g-0">
             <div class="col-md-8">
@@ -225,38 +172,7 @@
     </section>
     </div>
   </main>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Mi Changuito</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="../assets/img/brasil.jpg" class="img-fluid rounded-start" alt="Imagen Card brasil">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Paquete Seleccionado</h5>
-                  <p class="card-text">Descripcion del paquete seleccionado.</p>
-                  <p class="card-text">Precio del paquete.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
-          <button type="button" class="btn btn-primary">Guardar Cambios</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--Cierre del Modal-->
+
   <footer>
     <div class="container p-3">
       <div class="row">
@@ -299,7 +215,7 @@
       </div>
     </div>
   </footer>
-  </div>
+
   <!-- Wow Js Script-->
   <script src="../js/wow.min.js"></script>
   <script>

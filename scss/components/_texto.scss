@@ -1,0 +1,66 @@
+.mini_titulo_form_traslados {
+    font-size: large;
+}
+
+.titulo_traslados_form {
+    font-size: 130%;
+}
+
+.texto {
+    position: absolute;
+    font-size: larger;
+    background-color: rgb(41, 223, 236);
+    font-family: sans-serif;
+}
+
+.volkswagen_virtus {
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.armado_paq_index {
+    h3 {
+        text-align: center;
+        color: white;
+        font-family: sans-serif;
+    }
+
+    div {
+        display: inline-block;
+        margin: 7px;
+        padding: 5px;
+        font-size: large;
+    }
+
+    label {
+        color: white;
+    }
+}
+
+
+.encabezado_sector {
+    text-align: center;
+
+    label {
+        font-size: medium;
+        font-family: sans-serif;
+    }
+
+    select {
+        font-size: medium;
+    }
+
+    input {
+        font-size: large;
+    }
+}
+
+.traslados_form {
+    align-self: center;
+}
+
+
+
+.precio_viejo {
+    text-decoration: line-through;
+}
