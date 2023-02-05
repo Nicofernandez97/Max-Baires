@@ -1,12 +1,17 @@
 .card {
   padding: 0;
   margin: 0;
+
 }
 
 .card-title-index {
-    text-align: center;
-  }
-  
-  .btn-card {
-    align-self: center;
-  }
+  text-align: center;
+}
+
+.btn-card {
+  align-self: center;
+}
+
+.nacionalycontactanos {
+  --bs-gutter-x: 0.5 rem;
+}

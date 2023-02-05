@@ -1,67 +1,69 @@
 @media (max-width: 767px) {
-    .contenedor_grid_index {
-      grid-template-columns: auto;
-      grid-template-rows: auto auto;
-      grid-template-areas: "ad ad"
-        "principal principal";
+  .contenedor_grid_index {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "ad ad"
+      "principal principal";
+  }
+
+  .contenedor_grid_internacional {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "ad_internacional ad_internacional"
+      "principal_internacional principal_internacional";
+  }
+
+  #ad_internacional {
+    max-height: 200px;
+  }
+
+  .contenedor_grid_traslados {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "ad ad"
+      "form content";
+  }
+
+  #ad_traslados {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  .armado_barra_traslados {
+    font-size: medium;
+
+    h3 {
+      text-align: center;
+      color: white;
+      font-family: sans-serif;
     }
-  
-    .contenedor_grid_internacional {
-      grid-template-columns: auto;
-      grid-template-rows: auto auto;
-      grid-template-areas: "ad_internacional ad_internacional"
-        "principal_internacional principal_internacional";
+
+    div {
+      display: inline-block;
+      margin: 7px;
+      padding: 5px;
+      font-size: large;
     }
-  
-    #ad_internacional {
-      max-height: 200px;
-    }
-  
-    .contenedor_grid_traslados {
-      grid-template-columns: 1fr 3fr;
-      grid-template-rows: auto auto;
-      grid-template-areas: "ad ad"
-        "form content";
-    }
-  
-    #ad_traslados {
-      width: 100%;
-      max-height: 200px;
-    }
-  
-    .armado_barra_traslados {
-      font-size: medium;
-      h3{
-        text-align: center;
-        color: white;
-        font-family: sans-serif;
-      }
-      div{
-        display: inline-block;
-        margin: 7px;
-        padding: 5px;
-        font-size: large;
-      }
-      label{
-        color: white;
-        font-size: x-large;
-      }
-    }
-  
-    #ad {
-      max-height: 200px;
-    }
-  
-    .carrousel_label {
-      font-size: medium;
-    }
-  
-    .galeria_paq_internacionales_titulo {
-      font-size: medium;
-    }
-  
-    #ad_nacionales img {
-      max-height: 200px;
+
+    label {
+      color: white;
+      font-size: x-large;
     }
   }
-  
+
+  #ad {
+    max-height: 200px;
+  }
+
+  .carrousel_label {
+    font-size: medium;
+  }
+
+  .galeria_paq_internacionales_titulo {
+    font-size: medium;
+  }
+
+  #ad_nacionales img {
+    max-height: 200px;
+  }
+}
