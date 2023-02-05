@@ -1,0 +1,17 @@
+$background_alojamiento: rgb(247, 202, 201);
+$background_form_contactanos: rgb(65, 48, 223);
+
+$colores: (
+    rosado: rgb(230, 209, 212),
+    celeste: #4e79d6,
+    marron: #c0673d7c,
+    verdeoscuro: rgb(13, 121, 13),
+);
+
+@each $general,
+$especifico in $colores {
+    .btn--#{$general} {
+        background-color: $especifico;
+        color: rgb(228, 20, 20);
+    }
+}

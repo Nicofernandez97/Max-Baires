@@ -14,19 +14,18 @@
   }
 
   #ad_internacional {
-    max-height: 200px;
+    @include max_height (200px);
   }
 
   .contenedor_grid_traslados {
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     grid-template-areas: "ad ad"
       "form content";
   }
 
   #ad_traslados {
-    width: 100%;
-    max-height: 200px;
+    @include max_height (200px);
   }
 
   .armado_barra_traslados {
@@ -52,7 +51,7 @@
   }
 
   #ad {
-    max-height: 200px;
+    height: 180px;
   }
 
   .carrousel_label {
@@ -64,6 +63,14 @@
   }
 
   #ad_nacionales img {
-    max-height: 200px;
+    @include max_height (200px);
+  }
+
+  .imagen1 {
+    display: none;
+  }
+
+  .imagen2 {
+    display: block;
   }
 }

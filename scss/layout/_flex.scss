@@ -1,27 +1,30 @@
 .form_titulo_index {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .titulos_menores {
-    display: flex;
-    justify-content: center;
-    padding: 1%;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
 }
 
 .galeria_index {
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-  
-    img {
-      width: 33%;
-      overflow: auto;
-    }
-  
-    a {
-      text-decoration: none;
-    }
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+
+  img {
+    width: 33%;
+    overflow: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
-  
-  
+
+.background_form_contactanos {
+  background-color: $background_form_contactanos;
+  color: white;
+}

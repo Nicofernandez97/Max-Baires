@@ -1,3 +1,23 @@
+.btn--rosado {
+  background-color: rgb(230, 209, 212);
+  color: rgb(228, 20, 20);
+}
+
+.btn--celeste {
+  background-color: #4e79d6;
+  color: rgb(228, 20, 20);
+}
+
+.btn--marron {
+  background-color: rgba(192, 103, 61, 0.4862745098);
+  color: rgb(228, 20, 20);
+}
+
+.btn--verdeoscuro {
+  background-color: rgb(13, 121, 13);
+  color: rgb(228, 20, 20);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +26,10 @@
 
 nav {
   justify-content: center;
+}
+
+header {
+  background-color: black;
 }
 
 footer {
@@ -19,13 +43,32 @@ footer {
 
 .boton_alquiler {
   margin-left: 50%;
-  background-color: pink;
-  color: red;
 }
 
 .button_alquiler_auto {
   background-color: rgb(253, 237, 5);
   font-size: larger;
+}
+
+.transformacion {
+  background-color: rgb(230, 209, 212);
+}
+
+.card {
+  padding: 0;
+  margin: 0;
+}
+
+.card-title-index {
+  text-align: center;
+}
+
+.btn-card {
+  align-self: center;
+}
+
+.nacionalycontactanos {
+  --bs-gutter-x: 0.5 rem;
 }
 
 .contenedorGrid {
@@ -47,6 +90,7 @@ footer {
   grid-template-columns: 1fr 6fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "form content ad";
+  background-color: rgb(247, 202, 201);
 }
 
 .contenedor_grid_index {
@@ -126,13 +170,17 @@ footer {
   text-decoration: none;
 }
 
-#ad_nacionales img {
-  width: 100%;
-  max-height: 300px;
+.background_form_contactanos {
+  background-color: rgb(65, 48, 223);
+  color: white;
 }
 
 #ad_nacionales {
   grid-area: ad_nacionales;
+}
+#ad_nacionales img {
+  max-height: 200px;
+  width: 100%;
 }
 
 #ad_traslados {
@@ -152,9 +200,12 @@ footer {
 }
 
 #ad img {
-  display: flex;
   width: 100%;
   height: 100%;
+}
+
+.imagen2 {
+  display: none;
 }
 
 .carrousel_label span {
@@ -167,21 +218,8 @@ footer {
 }
 
 .transformacion:hover {
-  background-color: green;
+  background-color: rgb(13, 121, 13);
   transition: 2s;
-}
-
-.card {
-  padding: 0;
-  margin: 0;
-}
-
-.card-title-index {
-  text-align: center;
-}
-
-.btn-card {
-  align-self: center;
 }
 
 .mini_titulo_form_traslados {
@@ -241,6 +279,11 @@ footer {
   text-decoration: line-through;
 }
 
+.labelcenter {
+  text-align: center;
+  display: block;
+}
+
 @media (max-width: 767px) {
   .contenedor_grid_index {
     grid-template-columns: auto;
@@ -256,12 +299,11 @@ footer {
     max-height: 200px;
   }
   .contenedor_grid_traslados {
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     grid-template-areas: "ad ad" "form content";
   }
   #ad_traslados {
-    width: 100%;
     max-height: 200px;
   }
   .armado_barra_traslados {
@@ -283,7 +325,7 @@ footer {
     font-size: x-large;
   }
   #ad {
-    max-height: 200px;
+    height: 180px;
   }
   .carrousel_label {
     font-size: medium;
@@ -293,5 +335,11 @@ footer {
   }
   #ad_nacionales img {
     max-height: 200px;
+  }
+  .imagen1 {
+    display: none;
+  }
+  .imagen2 {
+    display: block;
   }
 }/*# sourceMappingURL=main.css.map */
