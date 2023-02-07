@@ -73,7 +73,7 @@ footer {
 
 .contenedorGrid {
   display: grid;
-  grid-template-columns: 7fr 1fr;
+  grid-template-columns: 7fr auto;
   grid-template-rows: auto auto auto;
   grid-template-areas: "searchbar searchbar" "principal ad" "footer footer";
 }
@@ -87,7 +87,7 @@ footer {
 
 .contenedor_grid_traslados {
   display: grid;
-  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-columns: 1fr 6fr auto;
   grid-template-rows: auto;
   grid-template-areas: "form content ad";
   background-color: rgb(247, 202, 201);
@@ -95,14 +95,14 @@ footer {
 
 .contenedor_grid_index {
   display: grid;
-  grid-template-columns: 6fr 1fr;
+  grid-template-columns: 6fr auto;
   grid-template-rows: auto;
   grid-template-areas: "principal ad";
 }
 
 .contenedor_grid_internacional {
   display: grid;
-  grid-template-columns: 8fr 1fr;
+  grid-template-columns: 8fr auto;
   grid-template-rows: auto;
   grid-template-areas: "principal_internacional ad_internacional";
 }
@@ -208,9 +208,25 @@ footer {
   display: none;
 }
 
+.imagen1 {
+  display: none;
+}
+
 .carrousel_label span {
   color: black;
   background-color: white;
+}
+
+.carousel-item {
+  max-height: 900px;
+  width: 100%;
+}
+
+.carousel-item img {
+  -o-object-fit: auto;
+     object-fit: auto;
+  max-height: 900px;
+  width: 100%;
 }
 
 .animate__bounce {
@@ -299,7 +315,7 @@ footer {
     max-height: 200px;
   }
   .contenedor_grid_traslados {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: auto auto;
     grid-template-areas: "ad ad" "form content";
   }

@@ -2,3 +2,14 @@
     color: black;
     background-color: white;
 }
+
+.carousel-item {
+    max-height: 900px;
+    width: 100%;
+}
+
+.carousel-item img {
+    object-fit: auto;
+    max-height: 900px;
+    width: 100%;
+}

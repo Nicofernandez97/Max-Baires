@@ -18,7 +18,7 @@
   }
 
   .contenedor_grid_traslados {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: auto auto;
     grid-template-areas: "ad ad"
       "form content";
