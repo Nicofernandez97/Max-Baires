@@ -1,6 +1,5 @@
+//Personalización Ads
 #ad_nacionales {
-    grid-area: ad_nacionales;
-
     img {
         @include max_height (200px);
         width: 100%;
@@ -8,8 +7,6 @@
 }
 
 #ad_traslados {
-    grid-area: ad;
-
     img {
         width: 100%;
         height: 100%;
@@ -17,8 +14,6 @@
 }
 
 #ad_internacional {
-    grid-area: ad_internacional;
-
     img {
         width: 100%;
         height: 100%;
@@ -30,6 +25,7 @@
     height: 100%;
 }
 
+//Los "ads" Se esconden en pantallas grandes y en _mediaqueries se muestran.
 .imagen2 {
     display: none;
 }

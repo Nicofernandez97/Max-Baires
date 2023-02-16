@@ -1,6 +1,8 @@
+//Colores Background en Alojamiento y la form de contactanos.
 $background_alojamiento: rgb(247, 202, 201);
-$background_form_contactanos: rgb(65, 48, 223);
+$background_form_contactanos: #F6DCD7;
 
+//Funcion Colores, Agregar un color genera una clase .btn--(nombrecolor).
 $colores: (
     rosado: rgb(230, 209, 212),
     celeste: #4e79d6,

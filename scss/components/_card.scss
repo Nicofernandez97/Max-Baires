@@ -1,17 +1,29 @@
+//Reset Cards
 .card {
   padding: 0;
   margin: 0;
-
 }
+
 
 .card-title-index {
   text-align: center;
 }
 
+
 .btn-card {
   align-self: center;
 }
 
+//Distancia entre las cards - eje X
 .nacionalycontactanos {
   --bs-gutter-x: 0.5 rem;
+}
+
+
+//Imagenes de las cards horizontales en Alojamiento. Object-fit para que no quede distorsionada la imagen, aunque se pierda un poco por los costados. 
+.imgcover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
 }

@@ -1,17 +1,16 @@
+//Color de fondo y texto
 .btn-primary {
   background-color: white;
   color: black;
 }
 
+//Boton Alquiler Traslados-Aloj.
 .boton_alquiler {
   margin-left: 50%;
-}
-
-.button_alquiler_auto {
-  background-color: rgb(253, 237, 5);
-  font-size: larger;
 }
 
 .transformacion {
   background-color: map-get($colores, rosado)
 }
+
+//Para colores de botones, Ver $colores en _colores. Llamar con .btn--(nombrecolor)

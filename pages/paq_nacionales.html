@@ -26,6 +26,7 @@
 </head>
 
 <body>
+  <!--Navbar Bootstrap-->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -49,7 +50,7 @@
               <a class="nav-link" href="../pages/paq_Internacionales.html">Paquetes Internacionales</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="../pages/paq_nacionales.html">Paquetes Nacionales</a>
+              <a class="nav-link active disabled" href="../pages/paq_nacionales.html">Paquetes Nacionales</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../pages/traslados.html">Traslados</a>
@@ -69,106 +70,117 @@
   </header>
   <!-- Fin del Header y comienzo del Main-->
   <main>
+    <!--Grid Layout-->
     <div class="contenedor_grid_nacionales">
+
+      <!--Comienzo Sector Ofertas Y Capital-->
       <section class="principal_nacionales">
+        <!-- Sector Ofertas-->
         <div class="row gx-0">
           <div class="container_fluid text-center">
             <h3><strong>Superofertas En Paquetes Locales</h3></strong>
           </div>
-          <div class="col-sm-12 col-md-6 col-xl-3 ">
-            <div class="card text-center border-info">
+          <div class="col-sm-12 col-md-6 col-xl-3">
+            <div class="card text-center border-info card ">
               <img src="../assets/img/SaltayJujuy1920x1080.jpg" class="card-img-top" alt="PaqueteSaltaJujuy">
               <div class="card-body">
                 <h5 class="card-title">Superoferta Paquete Norte Argentino</h5>
-                <p class="card-text">Descubrí todo lo que el norte argentino tiene para ofrecerte a un precio
+                <p class="card-text">Descubrí todo lo que las provincias del norte argentino tiene para ofrecerte a un
+                  precio
                   inmejorable con esta oferta. </p>
                 <p class="card-text"> Precio: <span class="precio_viejo"> $400 USD x Persona </span> $250 USD x Persona
                 </p>
-                <a href="./pages/paq_nacionales.html" class="btn btn-primary transformacion">Mas Informacion</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-12 col-md-6 col-xl-3">
-            <div class="card text-center border-danger">
-              <img src="../assets/img/citytour1920x1080.jpg" class="card-img-top" alt="CityTour">
-              <div class="card-body">
-                <h5 class="card-title">Superoferta CityTour</h5>
-                <p class="card-text">Viví la Provincia de Buenos Aires como nunca antes en este CityTour a un precio
-                  inmejorable con esta oferta </p>
-                <p class="card-text"> Precio: <span class="precio_viejo"> $16000 Para 4 Personas </span> $10000 Para 4
-                  Personas </p>
                 <a href="../pages/paq_nacionales.html" class="btn btn-primary transformacion">Mas Informacion</a>
               </div>
             </div>
           </div>
 
           <div class="col-sm-12 col-md-6 col-xl-3">
-            <div class="card text-center border-warning">
+            <div class="card text-center border-warning card">
               <img src="../assets/img/fiestassur1920x1080.jpg" class="card-img-top" alt="España">
               <div class="card-body">
                 <h5 class="card-title">Superoferta Paquete Sur Argentino</h5>
-                <p class="card-text">Descubrí todo lo que el sur argentino tiene para ofrecerte a un precio inmejorable
+                <p class="card-text">Descubrí todo lo que las provincias del sur argentino tiene para ofrecerte a un
+                  precio inmejorable
                   con esta oferta. </p>
                 <p class="card-text"> Precio: <span class="precio_viejo"> $550 USD x Persona </span> $335 USD x Persona
                 </p>
-                <a href="./pages/paq_nacionales.html" class="btn btn-primary transformacion">Mas Informacion</a>
+                <a href="../pages/paq_nacionales.html" class="btn btn-primary transformacion">Mas Informacion</a>
               </div>
             </div>
           </div>
 
-          <div class="col-sm-12 col-md-6 col-xl-3 ">
-            <div class="card text-center border-dark">
+          <div class="col-sm-12 col-md-6 col-xl-3">
+            <div class="card text-center border-dark card">
               <img src="../assets/img/Cataratas1920X1080.jpg" class="card-img-top" alt="España">
               <div class="card-body">
                 <h5 class="card-title">Superoferta Paquete Cataratas</h5>
-                <p class="card-text">Viví las Cataratas del lado Argentino y del lado Brasilero a un precio inmejorable
+                <p class="card-text">Viví las Cataratas del Iguazú del lado Argentino y del lado Brasilero a un precio
+                  inmejorable
                   con esta oferta. </p>
                 <p class="card-text"> Precio: <span class="precio_viejo"> $480 USD x Persona </span> $300 USD x Persona
                 </p>
-                <a href="./pages/paq_nacionales.html" class="btn btn-primary transformacion">Mas Informacion</a>
+                <a href="../pages/paq_nacionales.html" class="btn btn-primary transformacion">Mas Informacion</a>
               </div>
             </div>
           </div>
 
+          <div class="col-sm-12 col-md-6 col-xl-3">
+            <div class="card text-center border-danger card">
+              <img src="../assets/img/citytour1920x1080.jpg" class="card-img-top" alt="CityTour">
+              <div class="card-body">
+                <h5 class="card-title">Superoferta CityTour</h5>
+                <p class="card-text">Viví la Ciudad de Buenos Aires como nunca antes en nuestro CityTour a un precio
+                  inmejorable con esta oferta </p>
+                <p class="card-text"> Precio: <span class="precio_viejo"> $40USD x 4 Personas </span> $25USD x 4
+                  Personas </p>
+                <a href="../pages/paq_nacionales.html" class="btn btn-primary transformacion">Mas Informacion</a>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- Fin Sector Ofertas y Capital-->
+        <!-- Ad Visible a partir de width: 767px o menor.-->
       </section>
       <section id="ad_nacionales">
         <img class="imagen2" src="../assets/img/mostaza_banner.jpg" alt="ad2">
       </section>
+      <!-- Sector Norte Argentino-->
       <section class="segunda_nacionales">
 
         <div class="row gx-0">
           <div class="container_fluid text-center">
             <h3><strong>Descubrí El Norte </strong></h3>
           </div>
-          <div class="col-sm-12 col-md-6 col-xl-4">
+          <div class="col-sm-12 col-md-6 col-xl-3">
             <div class="card text-center border-light">
               <img src="../assets/img/paquetesalta1920x1080.jpg" class="card-img-top" alt="PaqueteTren">
               <div class="card-body">
                 <h5 class="card-title">Paquete Tren De las nubes</h5>
-                <p class="card-text">Viví un fin de semana inolvidable en Salta y culminalo con un hermoso viaje en el
-                  legendario tren de las nubes. </p>
+                <p class="card-text">Viví un fin de semana inolvidable en Salta, disfrutando todo lo que ofrece la
+                  provincia Y
+                  culminalo con un hermoso viaje en el legendario tren de las nubes. </p>
                 <p class="card-text"> Precio: $150 USD x Persona </p>
                 <a href="../pages/paq_nacionales.html" class="btn btn-primary transformacion">Mas Informacion</a>
               </div>
             </div>
           </div>
 
-          <div class="col-sm-12 col-md-6 col-xl-4">
+          <div class="col-sm-12 col-md-6 col-xl-3">
             <div class="card text-center border-secondary">
               <img src="../assets/img/tucuman1920x1080.jpg" class="card-img-top" alt="Tucuman">
               <div class="card-body">
                 <h5 class="card-title">Paquete Tucuman</h5>
-                <p class="card-text">Viví un hermoso fin de semana en Tucuman, conociendo la Casita De Tucuman, La
-                  Catedral Tucumana y mucho mas. </p>
+                <p class="card-text">Viví un hermoso fin de semana en Tucuman, la cuna de la independecia, conociendo la
+                  Casita De Tucuman, La
+                  Catedral Tucumana, Tafí Del Valle y mucho mas. </p>
                 <p class="card-text"> Precio: $100 USD x Persona </p>
                 <a href="../pages/paq_nacionales.html" class="btn btn-primary transformacion">Mas Informacion</a>
               </div>
             </div>
           </div>
 
-          <div class="col-sm-12 col-md-12 col-xl-4">
+          <div class="col-sm-12 col-md-6 col-xl-3">
             <div class="card text-center border-success">
               <img src="../assets/img/formosa1920x1080.jpg" class="card-img-top" alt="Formosa">
               <div class="card-body">
@@ -181,15 +193,30 @@
               </div>
             </div>
           </div>
+
+          <div class="col-sm-12 col-md-6 col-xl-3">
+            <div class="card text-center border-success">
+              <img src="../assets/img/larioja1920x1080.jpg" class="card-img-top" alt="Larioja">
+              <div class="card-body">
+                <h5 class="card-title">Paquete La Rioja y San Juan</h5>
+                <p class="card-text">Pasá un inolvidable fin de semana en La Rioja y San Juan, con excursiones a
+                  Talampaya,
+                  el Valle De La Luna, la Ruta Del Cielo y mucho mas. </p>
+                <p class="card-text"> Precio: $120 USD x Persona </p>
+                <a href="../pages/paq_nacionales.html" class="btn btn-primary transformacion">Mas Informacion</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
+      <!-- Fin Sector Norte Argentino y Comienzo Sector Patagonia-->
       <section class="tercera_nacionales">
-
         <div class="row gx-0">
           <div class="container_fluid text-center">
             <h3><strong>Descubrí La Patagonia </strong></h3>
           </div>
-          <div class="col-sm-12 col-md-6 col-xl-4">
+          <div class="col-sm-12 col-md-6 col-xl-3">
             <div class="card text-center border-light">
               <img src="../assets/img/rionegro1920x1080.jpg" class="card-img-top" alt="rionegro">
               <div class="card-body">
@@ -202,7 +229,7 @@
             </div>
           </div>
 
-          <div class="col-sm-12 col-md-6 col-xl-4">
+          <div class="col-sm-12 col-md-6 col-xl-3">
             <div class="card text-center border-secondary">
               <img src="../assets/img/neuquen1920x1080.jpg" class="card-img-top" alt="Neuquen">
               <div class="card-body">
@@ -215,7 +242,7 @@
             </div>
           </div>
 
-          <div class="col-sm-12 col-md-12 col-xl-4">
+          <div class="col-sm-12 col-md-6 col-xl-3">
             <div class="card text-center border-success">
               <img src="../assets/img/santacruz1920x1080.jpg" class="card-img-top" alt="SantaCruz">
               <div class="card-body">
@@ -227,9 +254,25 @@
               </div>
             </div>
           </div>
+
+          <div class="col-sm-12 col-md-6 col-xl-3">
+            <div class="card text-center border-success">
+              <img src="../assets/img/tierradelfuego1920x1080.jpg" class="card-img-top" alt="TierraDelFuego">
+              <div class="card-body">
+                <h5 class="card-title">Paquete Tierra Del Fuego</h5>
+                <p class="card-text">Pasá un inolvidable fin de semana en Tierra del Fuego, conociendo
+                  el Parque Nacional, el Glaciar Martial y mucho mas.
+                </p>
+                <p class="card-text"> Precio: $220 USD x Persona </p>
+                <a href="../pages/paq_nacionales.html" class="btn btn-primary transformacion">Mas Informacion</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
     </div>
+    <!-- Fin del Sector Patagonia y Grid Layout-->
   </main>
   <!-- Fin del Main y comienzo del footer-->
   <footer>
@@ -274,6 +317,7 @@
       </div>
     </div>
   </footer>
+  <!-- Fin Del Footer y comienzo Scripts-->
   <!-- Wow Js Script-->
   <script src="../js/wow.min.js"></script>
   <script>

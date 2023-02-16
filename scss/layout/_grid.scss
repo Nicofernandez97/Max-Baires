@@ -8,6 +8,7 @@
     "footer footer";
 }
 
+//Comienzo Grid Nacionales
 .contenedor_grid_nacionales {
   display: grid;
   grid-template-columns: auto;
@@ -18,13 +19,47 @@
     "tercera_nacionales";
 }
 
+.principal_nacionales {
+  grid-area: principal_nacionales;
+}
+
+.segunda_nacionales {
+  grid-area: segunda_nacionales;
+}
+
+.tercera_nacionales {
+  grid-area: tercera_nacionales;
+}
+
+#ad_nacionales {
+  grid-area: ad_nacionales;
+}
+
+//Fin Grid Nacionales
+
+//Comienzo Grid Traslados
 .contenedor_grid_traslados {
   display: grid;
   grid-template-columns: 1fr 6fr auto;
   grid-template-rows: auto;
-  grid-template-areas: "form content ad";
+  grid-template-areas: "form content ad_traslados";
   background-color: $background_alojamiento;
 }
+
+.traslados_content {
+  grid-area: content;
+}
+
+.traslados_form {
+  grid-area: form;
+}
+
+#ad_traslados {
+  grid-area: ad_traslados;
+}
+
+
+//Fin Grid Traslados
 
 .contenedor_grid_index {
   display: grid;
@@ -44,16 +79,8 @@
   }
 }
 
-.principal_nacionales {
-  grid-area: principal_nacionales;
-}
-
-.segunda_nacionales {
-  grid-area: segunda_nacionales;
-}
-
-.tercera_nacionales {
-  grid-area: tercera_nacionales;
+#ad_internacional {
+  grid-area: ad_internacional;
 }
 
 .principal_index {
@@ -62,14 +89,6 @@
 
 .setup_footer {
   grid-area: footer;
-}
-
-.traslados_content {
-  grid-area: content;
-}
-
-.traslados_form {
-  grid-area: form;
 }
 
 .principal_internacional {
