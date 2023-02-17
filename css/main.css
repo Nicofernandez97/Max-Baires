@@ -69,6 +69,10 @@ footer {
      object-fit: cover;
 }
 
+.mtop {
+  margin-top: 3px;
+}
+
 .contenedorGrid {
   display: grid;
   grid-template-columns: 7fr auto;
@@ -104,7 +108,7 @@ footer {
   grid-template-columns: 1fr 6fr auto;
   grid-template-rows: auto;
   grid-template-areas: "form content ad_traslados";
-  background-color: rgb(247, 202, 201);
+  background-color: rgb(247, 226, 225);
 }
 
 .traslados_content {
@@ -124,6 +128,33 @@ footer {
   grid-template-columns: 6fr auto;
   grid-template-rows: auto;
   grid-template-areas: "principal ad";
+}
+
+.segundogridindex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "alo tras";
+}
+
+.aloindex {
+  grid-area: alo;
+  display: flex;
+  flex-direction: column;
+}
+.aloindex h3 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.trasindex {
+  grid-area: tras;
+  display: flex;
+  flex-direction: column;
+}
+.trasindex h3 {
+  margin: 0px;
+  padding: 0px;
 }
 
 .contenedor_grid_internacional {
@@ -245,17 +276,8 @@ footer {
 .traslados_form {
   align-self: center;
 }
-
-.texto {
-  position: absolute;
-  font-size: larger;
-  background-color: rgb(41, 223, 236);
-  font-family: sans-serif;
-}
-
-.volkswagen_virtus {
-  font-size: larger;
-  font-family: Arial, Helvetica, sans-serif;
+.traslados_form label {
+  display: block;
 }
 
 .encabezado_sector {
@@ -281,12 +303,8 @@ footer {
   display: block;
 }
 
-.traslados_form label {
-  display: block;
-}
-
 .background_form_contactanos {
-  background-color: #F6DCD7;
+  background-color: rgb(250, 231, 196);
   color: black;
 }
 
@@ -298,11 +316,22 @@ footer {
   display: none;
 }
 
+@media (max-width: 991px) {
+  .nav-item {
+    align-self: center;
+  }
+}
 @media (max-width: 767px) {
   .contenedor_grid_index {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     grid-template-areas: "ad ad" "principal principal";
+  }
+  .segundogridindex {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "alo" "tras";
   }
   .contenedor_grid_internacional {
     grid-template-columns: auto;

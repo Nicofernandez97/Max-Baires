@@ -7,21 +7,15 @@
     font-size: 130%;
 }
 
+//Form Traslados display
 .traslados_form {
     align-self: center;
+
+    label {
+        display: block;
+    }
 }
 
-.texto {
-    position: absolute;
-    font-size: larger;
-    background-color: rgb(41, 223, 236);
-    font-family: sans-serif;
-}
-
-.volkswagen_virtus {
-    font-size: larger;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 //Encabezado Sector index
 .encabezado_sector {
@@ -51,12 +45,7 @@
     display: block;
 }
 
-//Form Traslados
-.traslados_form {
-    label {
-        display: block;
-    }
-}
+
 
 //Form Contactanos- Color texto y fondo.
 .background_form_contactanos {

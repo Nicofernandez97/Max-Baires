@@ -60,7 +60,7 @@
 
 
 //Fin Grid Traslados
-
+//primer grid index
 .contenedor_grid_index {
   display: grid;
   grid-template-columns: 6fr auto;
@@ -68,6 +68,38 @@
   grid-template-areas: "principal ad";
 }
 
+//Segundo Grid Index
+.segundogridindex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "alo tras";
+}
+
+.aloindex {
+  grid-area: alo;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+.trasindex {
+  grid-area: tras;
+  display: flex;
+  flex-direction: column;
+
+
+  h3 {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+//Grid Paq. Internacionales
 .contenedor_grid_internacional {
   display: grid;
   grid-template-columns: 8fr auto;

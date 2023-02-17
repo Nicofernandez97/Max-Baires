@@ -4,6 +4,6 @@
 
     //Hover en botones "Mas Informacion".
     .transformacion:hover {
-        background-color: rgb(13, 121, 13);
+        background-color: $hover_button_color;
         transition: 2s;
     }

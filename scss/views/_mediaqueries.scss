@@ -1,16 +1,36 @@
+//Ajustes de Nav-item en el pixel que cambia el header a su modo responsive (992px).
+@media (max-width: 991px) {
+  .nav-item {
+    align-self: center;
+  }
+}
+
 //Ajustes Grid y "ads" en responsive.
 @media (max-width: 767px) {
   .contenedor_grid_index {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
-    grid-template-areas: "ad ad"
+    grid-template-areas:
+      "ad ad"
       "principal principal";
   }
+
+  .segundogridindex {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "alo"
+      "tras";
+  }
+
+
 
   .contenedor_grid_internacional {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
-    grid-template-areas: "ad_internacional ad_internacional"
+    grid-template-areas:
+      "ad_internacional ad_internacional"
       "principal_internacional principal_internacional";
   }
 
@@ -21,7 +41,8 @@
   .contenedor_grid_traslados {
     grid-template-columns: 1fr 5fr;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "ad_traslados ad_traslados"
+    grid-template-areas:
+      "ad_traslados ad_traslados"
       "form form"
       "content content";
   }
@@ -69,6 +90,7 @@
     @include max_height (200px);
   }
 
+  //Ads Que se muestran/Ocultan
   .imagen1 {
     display: none;
   }
