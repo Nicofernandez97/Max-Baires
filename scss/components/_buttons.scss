@@ -17,4 +17,18 @@
   background-color: map-get($colores, rosado)
 }
 
+.boton-carrito {
+  margin-top: 16px;
+  ;
+
+  span {
+    font-size: small;
+  }
+
+  button {
+    background-color: rgb(243, 201, 208);
+  }
+}
+
+
 //Para colores de botones, Ver $colores en _colores. Llamar con .btn--(nombrecolor)

@@ -49,6 +49,16 @@ footer {
   background-color: rgb(230, 209, 212);
 }
 
+.boton-carrito {
+  margin-top: 16px;
+}
+.boton-carrito span {
+  font-size: small;
+}
+.boton-carrito button {
+  background-color: rgb(243, 201, 208);
+}
+
 .card {
   padding: 0;
   margin: 0;

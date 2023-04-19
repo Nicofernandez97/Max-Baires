@@ -65,8 +65,10 @@
                             <a class="nav-link active disabled" href="../pages/sectorcompras.html">Sector Compras</a>
                         </li>
                 </div>
-                <ul><button type="button" data-bs-toggle="modal" data-bs-target="#modal1"> <i
-                            class="fa-solid fa-cart-shopping fa-2x"></i><span>0</span></button></ul>
+                <ul class="boton-carrito"><button class type="button" data-bs-toggle="modal" data-bs-target="#modal1">
+                        <i class="fa-solid fa-cart-shopping fa-2x"></i><span id="carrito-mostrar-cantidad">Carrito
+                            Vacío</span></button>
+                </ul>
             </div>
             </div>
         </nav>
@@ -86,20 +88,22 @@
         <!-- Modal -->
         <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content ">
                     <div class="modal-header">
                         <h4 class="modal-title fs-5" id="exampleModalLabel"><strong> Carrito de compras de Max-Baires
                             </strong></h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body modal-caja">
                         <p><strong> Estas llevando:</strong></p>
                         <div class="container-fluid">
                             <div class="row" id="contenido-modal">
                             </div>
                         </div>
                         <div>
-                            <p class="text-center">Subtotal:</p>
+                            <p class="text-center" id="total-compra">Subtotal:
+                            <p id="sumaPrecioAModificar" class="text-center"></p>
+                            </p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguír
@@ -154,7 +158,7 @@
     </footer>
     <!--Fin footer y comienzo Scripts-->
     <script src="../js/paquetes.js"></script>
-    <script src="../js/App.js"></script>
+    <script src="../js/paquetesDom.js"></script>
     <script src="../js/carrito.js"></script>
     <!-- Wow Js Script-->
     <script src="../js/wow.min.js"></script>
