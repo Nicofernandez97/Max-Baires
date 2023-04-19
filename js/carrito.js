@@ -46,7 +46,6 @@ const carritoLive = (carrito) => {
     const sumaMontoTotal = carrito.reduce((acc, paq) => acc + (paq.precio * paq.personas), 0)
     pintarTotalesCarrito(contadorMontoCarrito, sumaMontoTotal)
     guardarEnLocalStorage(carrito)
-    console.log(localStorage)
 }
 const pintarTotalesCarrito = (contadorMontoCarrito, sumaMontoTotal) => {
     const contadorVacio = document.getElementById("carrito-mostrar-cantidad")
@@ -99,7 +98,22 @@ const guardarEnLocalStorage = (carrito) => {   //Utilizada en carritoLive, cada 
     localStorage.setItem("carrito", carritoString)
 }
 const obtenerDelLocalStorage = () => {
-    const recuperarCarrito = localStorage.getItem("carrito")
+    let recuperarCarrito = localStorage.getItem("carrito")
     recuperarCarrito = JSON.parse(recuperarCarrito)
     return recuperarCarrito
 }
+
+
+if (localStorage.getItem("carrito")) {
+    carrito = obtenerDelLocalStorage()
+    carritoLive(carrito)
+    reseteoDomPostQuite(carrito)
+}
+
+
+const limpiarLocalStorage = document.querySelector("#vaciarLocalStorage")
+limpiarLocalStorage.addEventListener("click", () => {
+    localStorage.clear()
+    console.log(localStorage)
+    refresh()
+})
