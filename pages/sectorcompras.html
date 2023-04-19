@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alojamientos Max Baires</title>
+    <title>Paseo de compras</title>
     <!--Favicon-->
     <link rel="shortcut icon" href="../assets/img/Logo.jpg" type="image/jpg" />
     <!--Keywords-->
@@ -65,8 +65,8 @@
                             <a class="nav-link active disabled" href="../pages/sectorcompras.html">Sector Compras</a>
                         </li>
                 </div>
-                </li>
-                </ul>
+                <ul><button type="button" data-bs-toggle="modal" data-bs-target="#modal1"> <i
+                            class="fa-solid fa-cart-shopping fa-2x"></i><span>0</span></button></ul>
             </div>
             </div>
         </nav>
@@ -74,45 +74,40 @@
     <!-- Fin del Header y comienzo del main-->
     <main>
 
-        <form class="background_form_contactanos" action="">
-            <fieldset class="text-center">
-                <h3 class="text-center"><strong>Bienvenido al sector compras </strong></h3>
-                <div class="row gx-0">
-                    <div class="col ">
-                        <label for="nombre"><strong> Ingrese su Nombre </strong></label>
-                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+        <div class="segunda_nacionales">
+            <div class="container_fluid text-center" id="container-paquetes">
+                <h3><strong>Paseo de compras Max-Baires </strong></h3>
+                <div class="row gx-0" id="contenedor-dom">
+                    <!-- Aquí va el codigo JS de App.js vía appendChild()-->
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title fs-5" id="exampleModalLabel"><strong> Carrito de compras de Max-Baires
+                            </strong></h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="col ">
-                        <label for="nombre"> <strong> Ingrese su Apellido </strong></label>
-                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+                    <div class="modal-body">
+                        <p><strong> Estas llevando:</strong></p>
+                        <div class="container-fluid">
+                            <div class="row" id="contenido-modal">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-center">Subtotal:</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguír
+                                Comprando</button>
+                            <button type="button" class="btn btn-primary">Pagar</button>
+                        </div>
                     </div>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label "> <strong>Ingrese Su Direccion de E-mail
-                        </strong></label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Ejemplo@hotmail.com">
-                </div>
-                <label for="nombre"> <strong> Filtrar Por Duda </strong></label>
-                <div class="input-group">
-
-                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                        <option selected>Consulta sobre formas de pago</option>
-                        <option value="1">Consulta sobre devoluciones / reintegro Previaje</option>
-                        <option value="2">Consulta Sobre inconvenientes en el destino</option>
-                        <option value="3">Consulta sobre como comprar</option>
-                        <option value="4">Otras consultas</option>
-                    </select>
-                    <button class="btn btn-outline-secondary btn--rosado" type="submit">Consultá!</button>
-                </div>
-
-            </fieldset>
-        </form>
-
-
-
-
-
     </main>
     <!-- Fin del Main y comienzo del footer-->
     <footer>
@@ -158,6 +153,9 @@
         </div>
     </footer>
     <!--Fin footer y comienzo Scripts-->
+    <script src="../js/paquetes.js"></script>
+    <script src="../js/App.js"></script>
+    <script src="../js/carrito.js"></script>
     <!-- Wow Js Script-->
     <script src="../js/wow.min.js"></script>
     <script>

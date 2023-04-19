@@ -41,6 +41,10 @@ footer {
   margin-left: 50%;
 }
 
+.eliminar-modal {
+  margin-left: 90%;
+}
+
 .transformacion {
   background-color: rgb(230, 209, 212);
 }
