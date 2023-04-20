@@ -21,7 +21,7 @@ const paquetes = [
         detalles: "Pasá un inolvidable fin de semana en la tierra Formoseña, con excursionas al Bañado La Estrella, el Parque Rio Pilcomayo y mucho mas.",
         precio: 39000,
         personas: 1,
-        imagen: "/assets/img/formosa1920x1080.jpg"
+        imagen: "assets/img/formosa1920x1080.jpg"
     },
     {
         id: 4,
