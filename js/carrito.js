@@ -1,10 +1,17 @@
 let carrito = []
+async function valorDolarOficial() {
+    const traerDolarOficial = await fetch("https://criptoya.com/api/dolar")
+    let valorDolarOficialConvertido = await traerDolarOficial.json()
+    const dolarAMostrar = valorDolarOficialConvertido.oficial
+    const dolarTurista = dolarAMostrar + ((dolarAMostrar * 0.3) + (dolarAMostrar * 0.45))
+    return dolarTurista
+}
+console.log(valorDolarOficial())
 
 const paquetesContenedor = document.getElementById("container-paquetes")
 paquetesContenedor.addEventListener("click", (e) => {
     if (e.target.classList.contains("modalAdd")) {          //Validación ID botones.
         validacionRepetido(e.target.id)
-
     }
 })
 
@@ -20,13 +27,12 @@ const validacionRepetido = (idPaquete) => {
         const cantidadRepetido = document.getElementById(`personas${paqueteRepetido.id}`)
         paqueteRepetido.personas++
         cantidadRepetido.innerHTML = ` <p>Estas reservando para: ${paqueteRepetido.personas} personas </p>
-        <p><strong> Subtotal ${paqueteRepetido.nombre}</strong>: ${paqueteRepetido.personas * paqueteRepetido.precio} Pesos argentinos </p>
-
+        <p class="text-center"><strong> Subtotal ${paqueteRepetido.nombre}</strong>: ${paqueteRepetido.personas * paqueteRepetido.precio} USD </p>
         `
         carritoLive(carrito)
     }
 }
-const agregarAlContenedorModal = (paquetes) => {                    //Creación y adición elementos Div con descripciones de paquetes post validación repetido. 
+const agregarAlContenedorModal = async (paquetes) => {                    //Creación y adición elementos Div con descripciones de paquetes post validación repetido. 
     const contenedorModal = document.getElementById("contenido-modal")
     const divModal = document.createElement("div")
     divModal.classList.add("col-xl-6")
@@ -34,9 +40,9 @@ const agregarAlContenedorModal = (paquetes) => {                    //Creación 
     <button type="button" class="eliminar-modal btn-close" value = "${paquetes.id}"></button> 
     <p><strong>${paquetes.nombre}</strong></p>
     <p><strong> Descripción</strong>: <br>${paquetes.detalles} </p>
-    <p><strong> Precio:</strong> ${paquetes.precio} pesos por persona </p>
-    <p id=personas${paquetes.id}><strong> Estas reservando para: </strong>${paquetes.personas} personas</p>    
-    
+    <p><strong> Precio:</strong> ${paquetes.precio} USD por persona </p>
+    <p id=personas${paquetes.id}><strong> Estas reservando para: </strong>${paquetes.personas} persona</p>    
+
 `
     contenedorModal.appendChild(divModal)
     carritoLive(carrito)
@@ -47,7 +53,7 @@ const carritoLive = (carrito) => {
     pintarTotalesCarrito(contadorMontoCarrito, sumaMontoTotal)
     guardarEnLocalStorage(carrito)
 }
-const pintarTotalesCarrito = (contadorMontoCarrito, sumaMontoTotal) => {
+const pintarTotalesCarrito = async (contadorMontoCarrito, sumaMontoTotal) => {
     const contadorVacio = document.getElementById("carrito-mostrar-cantidad")
     const sumaPrecioVacio = document.getElementById("sumaPrecioAModificar")
     if (contadorMontoCarrito == 1) {
@@ -59,7 +65,7 @@ const pintarTotalesCarrito = (contadorMontoCarrito, sumaMontoTotal) => {
     else {
         contadorVacio.innerText = ` ${carrito.length} Paquetes en carrito`
     }
-    sumaPrecioVacio.innerText = `$ ${sumaMontoTotal} Pesos argentinos`
+    sumaPrecioVacio.innerText = ` Su subtotal es ${sumaMontoTotal} Dolares. \n Pagando en pesos su subtotal sería $${sumaMontoTotal * await valorDolarOficial()} Pesos argentinos.   `
 }
 
 const encontrarBotonEliminado = document.querySelector(".modal-caja")
@@ -71,11 +77,19 @@ encontrarBotonEliminado.addEventListener("click", (e) => {
 })
 const eliminarPaqueteCarrito = (paqueteID) => { //Esta función busca al paquete a eliminar por su ID y lo splicea, ejecutando el reseteo tanto de la escritura de carrito en el DOM (vía reseteoDomPostQuite) y la actualización de valores subtotales y de cantidad de productos en el carrito (vía carritoLive)   
     const paquetePorId = carrito.findIndex(paquete => paquete.id == paqueteID) // ATENCION: NO USAR === 
+    const cambiarNumeroPersonas = carrito.find(paquete => paquete.id == paqueteID)
+    cambiarNumeroPersonas.personas = 1   //Esto lo coloqué para que cuando saque algo del carrito y lo vuelva a agregar la cantidad de personas indicadas se resetee.
     carrito.splice(paquetePorId, 1)
     reseteoDomPostQuite(carrito)
     carritoLive(carrito)
 }
 
+
+const valorDolarOficialEnDom = async () => {
+    const dolarEnDom = document.getElementById("contenido-dolar")
+    dolarEnDom.innerHTML = `Le informamos que el valor del dolar turista es de ${await valorDolarOficial()} pesos por dolar, ${fechaCompleta()}`
+}
+valorDolarOficialEnDom();
 const reseteoDomPostQuite = (carrito) => {  //Esta función limpa los valores que se crearon antes vía dom (vía .innerHTML = "") y los recrea. Su función es actualizar los valores de Carrito en el DOM.
     const contenedorModal = document.getElementById("contenido-modal")
     contenedorModal.innerHTML = ""   //Reseteo del DOM del modal
@@ -86,7 +100,7 @@ const reseteoDomPostQuite = (carrito) => {  //Esta función limpa los valores qu
     <button type="button" class="eliminar-modal btn-close"  value="${paquetes.id}"></button> 
     <p><strong>${paquetes.nombre}</strong></p>
     <p><strong> Descripción</strong>: <br>${paquetes.detalles} </p>
-    <p><strong> Precio:</strong> ${paquetes.precio} pesos por persona </p>
+    <p><strong> Precio:</strong> ${paquetes.precio} USD por persona </p>
     <p id=personas${paquetes.id}><strong> Estas reservando para: </strong>${paquetes.personas} personas</p>    
 `
         contenedorModal.appendChild(divModal)
@@ -114,6 +128,18 @@ if (localStorage.getItem("carrito")) {
 const limpiarLocalStorage = document.querySelector("#vaciarLocalStorage")
 limpiarLocalStorage.addEventListener("click", () => {
     localStorage.clear()
-    console.log(localStorage)
-    refresh()
+    console.log(`En el localStorage quedaron ${localStorage.length} articulos.`)
+    carrito = []
+    paquetes.forEach(paquete => {
+        paquete.personas = 1
+    })
+    carritoLive(carrito)
+    reseteoDomPostQuite(carrito)
 })
+const fechaCompleta = () => {
+    const DateTime = luxon.DateTime
+    let dt = DateTime.now();
+    let fechaLocal = dt.toLocaleString(DateTime.DATE_SHORT)
+    let horaLocal = dt.toLocaleString(DateTime.TIME_24_WITH_SECONDS)
+    return `el día ${fechaLocal} a las ${horaLocal}.`
+}

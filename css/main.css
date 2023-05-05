@@ -56,7 +56,11 @@ footer {
   font-size: small;
 }
 .boton-carrito button {
-  background-color: rgb(243, 201, 208);
+  background-color: rgb(238, 208, 247);
+}
+
+.boton-compra {
+  background-color: beige;
 }
 
 .card {
@@ -85,6 +89,10 @@ footer {
 
 .mtop {
   margin-top: 3px;
+}
+
+.background-modal {
+  background-color: rgb(247, 224, 247);
 }
 
 .contenedorGrid {

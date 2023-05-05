@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Script Luxon-->
+    <script src=" https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
+    <!--Script Sweetalert2-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--Css Personal (Al final del head)-->
     <link rel="stylesheet" href="../css/main.css" />
 </head>
@@ -65,13 +69,12 @@
                             <a class="nav-link active disabled" href="../pages/sectorcompras.html">Sector Compras</a>
                         </li>
                 </div>
-                <ul class="boton-carrito vacio" id="vaciarLocalStorage"><button class type="button">
-                        <i class="fa-solid fa-cart-shopping fa-2x"></i><span>Vaciar Localstorage
-                            (actualizar)</span></button>
-                </ul>
                 <ul class="boton-carrito"><button class type="button" data-bs-toggle="modal" data-bs-target="#modal1">
                         <i class="fa-solid fa-cart-shopping fa-2x"></i><span id="carrito-mostrar-cantidad">Carrito
                             Vacío</span></button>
+                </ul>
+                <ul class="boton-carrito vacio" id="vaciarLocalStorage"><button class type="button ">
+                        <i class="fa-solid fa-cart-shopping fa-2x"></i><span>Vaciar Carrito</span></button>
                 </ul>
             </div>
             </div>
@@ -92,13 +95,14 @@
         <!-- Modal -->
         <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content ">
+                <div class="modal-content background-modal">
                     <div class="modal-header">
                         <h4 class="modal-title fs-5" id="exampleModalLabel"><strong> Carrito de compras de Max-Baires
                             </strong></h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body modal-caja">
+                        <p><span id="contenido-dolar"></span></p>
                         <p><strong> Estas llevando:</strong></p>
                         <div class="container-fluid">
                             <div class="row" id="contenido-modal">
