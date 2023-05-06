@@ -15,6 +15,7 @@ paquetesContenedor.addEventListener("click", (e) => {
     }
 })
 
+
 const validacionRepetido = (idPaquete) => {
     const booleanoRepetido = carrito.some(paquete => paquete.id == idPaquete)          //Se busca el id del paquete en el carrito. Si se repite, booleanerepetido será true
     if (!booleanoRepetido) {
@@ -30,6 +31,15 @@ const validacionRepetido = (idPaquete) => {
         <p class="text-center"><strong> Subtotal ${paqueteRepetido.nombre}</strong>: ${paqueteRepetido.personas * paqueteRepetido.precio} USD </p>
         `
         carritoLive(carrito)
+        Toastify({
+            text: `Se agrego una persona al ${paqueteRepetido.nombre}, tiene en total ${paqueteRepetido.personas} personas`,
+            duration: 1800,
+            gravity: "top",
+            position: "right",
+            style: {
+                background: "linear-gradient(to right, #E55D87, #5FC3E4)",
+            }
+        }).showToast();
     }
 }
 const agregarAlContenedorModal = async (paquetes) => {                    //Creación y adición elementos Div con descripciones de paquetes post validación repetido. 
@@ -41,11 +51,16 @@ const agregarAlContenedorModal = async (paquetes) => {                    //Crea
     <p><strong>${paquetes.nombre}</strong></p>
     <p><strong> Descripción</strong>: <br>${paquetes.detalles} </p>
     <p><strong> Precio:</strong> ${paquetes.precio} USD por persona </p>
-    <p id=personas${paquetes.id}><strong> Estas reservando para: </strong>${paquetes.personas} persona</p>    
+    <p id=personas${paquetes.id}><strong> Estas reservando para: </strong>${paquetes.personas} personas</p>    
 
 `
     contenedorModal.appendChild(divModal)
     carritoLive(carrito)
+    Toastify({
+        text: `Se agrego el ${paquetes.nombre} al carrito, cliqueá en reserva! para agregar mas personas.`,
+        duration: 1800,
+        gravity: "top"
+    }).showToast();
 }
 const carritoLive = (carrito) => {
     const contadorMontoCarrito = carrito.reduce((acc, paq) => acc + paq.personas, 0)
@@ -124,22 +139,47 @@ if (localStorage.getItem("carrito")) {
     reseteoDomPostQuite(carrito)
 }
 
-
+//Pregunta vaciar carrito vía SweetAlert
 const limpiarLocalStorage = document.querySelector("#vaciarLocalStorage")
 limpiarLocalStorage.addEventListener("click", () => {
-    localStorage.clear()
-    console.log(`En el localStorage quedaron ${localStorage.length} articulos.`)
-    carrito = []
-    paquetes.forEach(paquete => {
-        paquete.personas = 1
+
+    Swal.fire({
+        title: 'Esta seguro que quiere vaciar el carrito?',
+        text: "Al vaciarlo, perderá los cambios que haya guardado de sesiones anteriores.",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Vaciar carrito',
+        cancelButtonText: "Cancelar",
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        },
+    }).then((result) => {
+        if (result.isConfirmed) {
+            localStorage.clear()
+            carrito = []
+            paquetes.forEach(paquete => {
+                paquete.personas = 1
+            })
+            carritoLive(carrito)
+            reseteoDomPostQuite(carrito)
+            Swal.fire(
+                'Borrado!',
+                'El carrito ha sido vaciado',
+                'success'
+            )
+        }
     })
-    carritoLive(carrito)
-    reseteoDomPostQuite(carrito)
 })
+// Fecha y hora vía Luxon
 const fechaCompleta = () => {
     const DateTime = luxon.DateTime
     let dt = DateTime.now();
     let fechaLocal = dt.toLocaleString(DateTime.DATE_SHORT)
     let horaLocal = dt.toLocaleString(DateTime.TIME_24_WITH_SECONDS)
-    return `el día ${fechaLocal} a las ${horaLocal}.`
+    return `Medido el día ${fechaLocal} a las ${horaLocal}.`
 }

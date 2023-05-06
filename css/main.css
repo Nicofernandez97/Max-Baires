@@ -63,6 +63,14 @@ footer {
   background-color: beige;
 }
 
+.botonmas {
+  max-height: 25px;
+}
+
+.botonmenos {
+  max-height: 25px;
+}
+
 .card {
   padding: 0;
   margin: 0;
