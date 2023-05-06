@@ -1,13 +1,11 @@
 let carrito = []
-async function valorDolarOficial() {
+async function valorDolarOficial() { //Retorna el valor del dolar Turista vía la API de criptoya
     const traerDolarOficial = await fetch("https://criptoya.com/api/dolar")
     let valorDolarOficialConvertido = await traerDolarOficial.json()
     const dolarAMostrar = valorDolarOficialConvertido.oficial
-    const dolarTurista = dolarAMostrar + ((dolarAMostrar * 0.3) + (dolarAMostrar * 0.45))
+    const dolarTurista = (dolarAMostrar + ((dolarAMostrar * 0.3) + (dolarAMostrar * 0.45))) ?? console.log("No se pudo obtener el valor de dolar, Por favor checkear API")
     return dolarTurista
 }
-console.log(valorDolarOficial())
-
 const paquetesContenedor = document.getElementById("container-paquetes")
 paquetesContenedor.addEventListener("click", (e) => {
     if (e.target.classList.contains("modalAdd")) {          //Validación ID botones.
@@ -75,13 +73,48 @@ const pintarTotalesCarrito = async (contadorMontoCarrito, sumaMontoTotal) => {
         contadorVacio.innerText = ` ${carrito.length} Paquete en carrito`
     }
     else if (contadorMontoCarrito == 0) {
-        contadorVacio.innerText = ` Carrito Vacío`
+        contadorVacio.innerText = `Carrito Vacío`
     }
     else {
         contadorVacio.innerText = ` ${carrito.length} Paquetes en carrito`
     }
     sumaPrecioVacio.innerText = ` Su subtotal es ${sumaMontoTotal} Dolares. \n Pagando en pesos su subtotal sería $${sumaMontoTotal * await valorDolarOficial()} Pesos argentinos.   `
 }
+
+
+const encontrarBotonPago = document.querySelector(".pago")
+encontrarBotonPago.addEventListener("click", () => {
+    if (carrito.length !== 0) {
+        Swal.fire(
+            'Pago Procesado Exitosamente',
+            'Muchas Gracias por viajar con Max-Baires!',
+            'success'
+        )
+        console.log("Usted ha comprado los siguientes paquetes:")
+        console.log(...carrito)
+        localStorage.clear()
+        carrito = []
+        paquetes.forEach(paquete => {
+            paquete.personas = 1
+        })
+        carritoLive(carrito)
+        reseteoDomPostQuite(carrito)
+    }
+    else {
+        Swal.fire(
+            'Por favor agregar productos al carrito!',
+            'No podrá proceder con la compra con el carrito vacío.',
+            'error'
+        )
+        localStorage.clear()
+        carrito = []
+        paquetes.forEach(paquete => {
+            paquete.personas = 1
+        })
+        carritoLive(carrito)
+        reseteoDomPostQuite(carrito)
+    }
+})
 
 const encontrarBotonEliminado = document.querySelector(".modal-caja")
 encontrarBotonEliminado.addEventListener("click", (e) => {
@@ -107,7 +140,7 @@ const valorDolarOficialEnDom = async () => {
 valorDolarOficialEnDom();
 const reseteoDomPostQuite = (carrito) => {  //Esta función limpa los valores que se crearon antes vía dom (vía .innerHTML = "") y los recrea. Su función es actualizar los valores de Carrito en el DOM.
     const contenedorModal = document.getElementById("contenido-modal")
-    contenedorModal.innerHTML = ""   //Reseteo del DOM del modal
+    contenedorModal.innerHTML = ""   //Reseteo del contenido del DOM 
     carrito.forEach(paquetes => {
         const divModal = document.createElement("div")
         divModal.classList.add("col-xl-6")
@@ -132,7 +165,7 @@ const obtenerDelLocalStorage = () => {
     return recuperarCarrito
 }
 
-
+//Obtener carrito del localstorage en nuevas sesiones
 if (localStorage.getItem("carrito")) {
     carrito = obtenerDelLocalStorage()
     carritoLive(carrito)
@@ -168,7 +201,7 @@ limpiarLocalStorage.addEventListener("click", () => {
             carritoLive(carrito)
             reseteoDomPostQuite(carrito)
             Swal.fire(
-                'Borrado!',
+                'Vaciado!',
                 'El carrito ha sido vaciado',
                 'success'
             )
